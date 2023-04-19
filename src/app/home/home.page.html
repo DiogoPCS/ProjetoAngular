@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Etec
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,14 +9,171 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Etec</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <h3>Projeto com Bootstrap e Ionic!</h3>
-    <hr>
-    <p>Componentes Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components"> - UI Components</a></p>
-    <p>Componentes Bootstrap <a target="_blank" rel="noopener noreferrer" href="https://getbootstrap.com/docs/5.3/components/buttons/"> - UI Components</a></p>
-  </div>
+    <!-- Menu Superior -->
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="6">
+        <ion-segment value="desenvolvimento_sistemas" (ionChange)="trocouCurso($event)">
+          <ion-segment-button value="desenvolvimento_sistemas">
+            <ion-label>Desenvolvimento de Sistemas</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="informatica_internet">
+            <ion-label>Informática para Internet</ion-label>
+          </ion-segment-button>
+          <ion-segment-button value="quimica">
+            <ion-label>Química</ion-label>
+          </ion-segment-button>
+        </ion-segment>
+      </ion-col>
+    </ion-row>
+
+    <!-- Conteúdo de Desenvolvimento de Sistemas -->
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="4">
+
+        <ion-card>
+          <img alt="Computer with code progamation" src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg" />
+          <ion-card-header>
+            <ion-card-title>Progamação Mobile</ion-card-title>
+            <ion-card-subtitle>Ionic & Bootstrap</ion-card-subtitle>
+          </ion-card-header>
+          
+          <ion-card-content>
+            Here's a small text description for the card content. Nothing more, nothing less.
+          </ion-card-content>
+        </ion-card>
+
+      </ion-col>
+      <ion-col size="4">
+
+        <ion-card>
+          <img alt="Computer with code progamation" src="https://images.pexels.com/photos/574069/pexels-photo-574069.jpeg?auto=compress&cs=tinysrgb&w=1600" />
+          <ion-card-header>
+            <ion-card-title>Progamação Mobile</ion-card-title>
+            <ion-card-subtitle>HTML & CSS</ion-card-subtitle>
+          </ion-card-header>
+          
+          <ion-card-content>
+            Here's a small text description for the card content. Nothing more, nothing less.
+          </ion-card-content>
+        </ion-card>
+
+      </ion-col>
+      <ion-col size="4">
+
+        <ion-card>
+          <img alt="Computer with code progamation" src="https://images.pexels.com/photos/5380792/pexels-photo-5380792.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+          <ion-card-header>
+            <ion-card-title>Progamação Mobile</ion-card-title>
+            <ion-card-subtitle>Síncrono & Assíncrono</ion-card-subtitle>
+          </ion-card-header>
+          
+          <ion-card-content>
+            Here's a small text description for the card content. Nothing more, nothing less.
+          </ion-card-content>
+        </ion-card>
+
+      </ion-col>
+    </ion-row>
+    
+        <!-- Conteúdo Informática para Internet -->
+        <ion-row class="ion-justify-content-center">
+          <ion-col size="4">
+    
+            <ion-card>
+              <img alt="Computer with code progamation" src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg" />
+              <ion-card-header>
+                <ion-card-title>Progamação Mobile</ion-card-title>
+                <ion-card-subtitle>Ionic & Bootstrap</ion-card-subtitle>
+              </ion-card-header>
+              
+              <ion-card-content>
+                Here's a small text description for the card content. Nothing more, nothing less.
+              </ion-card-content>
+            </ion-card>
+    
+          </ion-col>
+          <ion-col size="4">
+    
+            <ion-card>
+              <img alt="Computer with code progamation" src="https://images.pexels.com/photos/574069/pexels-photo-574069.jpeg?auto=compress&cs=tinysrgb&w=1600" />
+              <ion-card-header>
+                <ion-card-title>Progamação Mobile</ion-card-title>
+                <ion-card-subtitle>HTML & CSS</ion-card-subtitle>
+              </ion-card-header>
+              
+              <ion-card-content>
+                Here's a small text description for the card content. Nothing more, nothing less.
+              </ion-card-content>
+            </ion-card>
+    
+          </ion-col>
+          <ion-col size="4">
+    
+            <ion-card>
+              <img alt="Computer with code progamation" src="https://images.pexels.com/photos/5380792/pexels-photo-5380792.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+              <ion-card-header>
+                <ion-card-title>Progamação Mobile</ion-card-title>
+                <ion-card-subtitle>Síncrono & Assíncrono</ion-card-subtitle>
+              </ion-card-header>
+              
+              <ion-card-content>
+                Here's a small text description for the card content. Nothing more, nothing less.
+              </ion-card-content>
+            </ion-card>
+    
+          </ion-col>
+        </ion-row>
+
+            <!-- Conteúdo de Química -->
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="4">
+
+        <ion-card>
+          <img alt="Computer with code progamation" src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg" />
+          <ion-card-header>
+            <ion-card-title>Progamação Mobile</ion-card-title>
+            <ion-card-subtitle>Ionic & Bootstrap</ion-card-subtitle>
+          </ion-card-header>
+          
+          <ion-card-content>
+            Here's a small text description for the card content. Nothing more, nothing less.
+          </ion-card-content>
+        </ion-card>
+
+      </ion-col>
+      <ion-col size="4">
+
+        <ion-card>
+          <img alt="Computer with code progamation" src="https://images.pexels.com/photos/574069/pexels-photo-574069.jpeg?auto=compress&cs=tinysrgb&w=1600" />
+          <ion-card-header>
+            <ion-card-title>Progamação Mobile</ion-card-title>
+            <ion-card-subtitle>HTML & CSS</ion-card-subtitle>
+          </ion-card-header>
+          
+          <ion-card-content>
+            Here's a small text description for the card content. Nothing more, nothing less.
+          </ion-card-content>
+        </ion-card>
+
+      </ion-col>
+      <ion-col size="4">
+
+        <ion-card>
+          <img alt="Computer with code progamation" src="https://images.pexels.com/photos/5380792/pexels-photo-5380792.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+          <ion-card-header>
+            <ion-card-title>Progamação Mobile</ion-card-title>
+            <ion-card-subtitle>Síncrono & Assíncrono</ion-card-subtitle>
+          </ion-card-header>
+          
+          <ion-card-content>
+            Here's a small text description for the card content. Nothing more, nothing less.
+          </ion-card-content>
+        </ion-card>
+
+      </ion-col>
+    </ion-row>
 </ion-content>
