@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      ETEC
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,14 +9,139 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">ETEC</ion-title>
     </ion-toolbar>
   </ion-header>
-
-  <div id="container">
-    <h3>Projeto com Bootstrap e Ionic!</h3>
-    <hr>
-    <p>Componentes Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components"> - UI Components</a></p>
-    <p>Componentes Bootstrap <a target="_blank" rel="noopener noreferrer" href="https://getbootstrap.com/docs/5.3/components/buttons/"> - UI Components</a></p>
-  </div>
+<!-- menu superior -->
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="6">
+      <ion-segment value="desenvolvimento_sistema" (ionChange)="trocouCurso($event)">
+        <ion-segment-button value="desenvolvimento_sistema">
+          <ion-label>Desenvolvimento de Sistema</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="informatica_internet">
+          <ion-label>Informatica para Internet</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="quimica">
+          <ion-label>Quimica</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-col>
+  </ion-row>
+  <!-- conteudo de desenvolovimento de sistema-->
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="4">
+      <ion-card>
+        <img alt="Silhouette of mountains" src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg" />
+        <ion-card-header>
+          <ion-card-title>Programação Moblie</ion-card-title>
+          <ion-card-subtitle>Ionic & Bootstrap</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          Here's a small text description for the card content. Nothing more, nothing less.
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col size="4">
+      <ion-card>
+        <img alt="Silhouette of mountains" src="https://images.pexels.com/photos/574069/pexels-photo-574069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+        <ion-card-header>
+          <ion-card-title>Programação Moblie</ion-card-title>
+          <ion-card-subtitle>HTML & CSS</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          Here's a small text description for the card content. Nothing more, nothing less.
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col size="4">
+      <ion-card>
+        <img alt="Silhouette of mountains" src="https://images.pexels.com/photos/4709285/pexels-photo-4709285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+        <ion-card-header>
+          <ion-card-title>Programação Moblie</ion-card-title>
+          <ion-card-subtitle>Sincrono & Assincrono</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          Here's a small text description for the card content. Nothing more, nothing less.
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <!-- conteudo de informatica para internet -->
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="4">
+      <ion-card>
+        <img alt="Silhouette of mountains" src="https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+        <ion-card-header>
+          <ion-card-title>Internet para Internet</ion-card-title>
+          <ion-card-subtitle>Ionic & Bootstrap</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          Here's a small text description for the card content. Nothing more, nothing less.
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col size="4">
+      <ion-card>
+        <img alt="Silhouette of mountains" src="https://images.pexels.com/photos/574069/pexels-photo-574069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+        <ion-card-header>
+          <ion-card-title>Programação Moblie</ion-card-title>
+          <ion-card-subtitle>HTML & CSS</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          Here's a small text description for the card content. Nothing more, nothing less.
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col size="4">
+      <ion-card>
+        <img alt="Silhouette of mountains" src="https://images.pexels.com/photos/4709285/pexels-photo-4709285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+        <ion-card-header>
+          <ion-card-title>Programação Moblie</ion-card-title>
+          <ion-card-subtitle>Sincrono & Assincrono</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          Here's a small text description for the card content. Nothing more, nothing less.
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="4">
+      <ion-card>
+        <img alt="Silhouette of mountains" src="https://images.pexels.com/photos/4050315/pexels-photo-4050315.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+        <ion-card-header>
+          <ion-card-title>Internet para Internet</ion-card-title>
+          <ion-card-subtitle>Ionic & Bootstrap</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          Here's a small text description for the card content. Nothing more, nothing less.
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col size="4">
+      <ion-card>
+        <img alt="Silhouette of mountains" src="https://images.pexels.com/photos/574069/pexels-photo-574069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+        <ion-card-header>
+          <ion-card-title>Programação Moblie</ion-card-title>
+          <ion-card-subtitle>HTML & CSS</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          Here's a small text description for the card content. Nothing more, nothing less.
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+    <ion-col size="4">
+      <ion-card>
+        <img alt="Silhouette of mountains" src="https://images.pexels.com/photos/4709285/pexels-photo-4709285.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+        <ion-card-header>
+          <ion-card-title>Programação Moblie</ion-card-title>
+          <ion-card-subtitle>Sincrono & Assincrono</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          Here's a small text description for the card content. Nothing more, nothing less.
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
 </ion-content>
