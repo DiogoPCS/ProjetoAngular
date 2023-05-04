@@ -31,55 +31,57 @@
     </ion-row>
 
     <!-- Conteúdo de Desenvolvimento de Sistemas -->
-    <ion-row class="ion-justify-content-center">
-      <ion-col size="4">
+    <ng-container *ngIf="this.item_selecionado == 'desenvolvimento_sistemas'">
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="4">
 
-        <ion-card>
-          <img alt="Computer with code progamation" src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg" />
-          <ion-card-header>
-            <ion-card-title>Progamação Mobile</ion-card-title>
-            <ion-card-subtitle>Ionic & Bootstrap</ion-card-subtitle>
-          </ion-card-header>
-          
-          <ion-card-content>
-            Here's a small text description for the card content. Nothing more, nothing less.
-          </ion-card-content>
-        </ion-card>
+          <ion-card>
+            <img alt="Computer with code progamation" src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg" />
+            <ion-card-header>
+              <ion-card-title>Progamação Mobile</ion-card-title>
+              <ion-card-subtitle>Ionic & Bootstrap</ion-card-subtitle>
+            </ion-card-header>
+            
+            <ion-card-content>
+              Here's a small text description for the card content. Nothing more, nothing less.
+            </ion-card-content>
+          </ion-card>
 
-      </ion-col>
-      <ion-col size="4">
+        </ion-col>
+        <ion-col size="4">
 
-        <ion-card>
-          <img alt="Computer with code progamation" src="https://images.pexels.com/photos/574069/pexels-photo-574069.jpeg?auto=compress&cs=tinysrgb&w=1600" />
-          <ion-card-header>
-            <ion-card-title>Progamação Mobile</ion-card-title>
-            <ion-card-subtitle>HTML & CSS</ion-card-subtitle>
-          </ion-card-header>
-          
-          <ion-card-content>
-            Here's a small text description for the card content. Nothing more, nothing less.
-          </ion-card-content>
-        </ion-card>
+          <ion-card>
+            <img alt="Computer with code progamation" src="https://images.pexels.com/photos/574069/pexels-photo-574069.jpeg?auto=compress&cs=tinysrgb&w=1600" />
+            <ion-card-header>
+              <ion-card-title>Progamação Mobile</ion-card-title>
+              <ion-card-subtitle>HTML & CSS</ion-card-subtitle>
+            </ion-card-header>
+            
+            <ion-card-content>
+              Here's a small text description for the card content. Nothing more, nothing less.
+            </ion-card-content>
+          </ion-card>
 
-      </ion-col>
-      <ion-col size="4">
+        </ion-col>
+        <ion-col size="4">
 
-        <ion-card>
-          <img alt="Computer with code progamation" src="https://images.pexels.com/photos/5380792/pexels-photo-5380792.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-          <ion-card-header>
-            <ion-card-title>Progamação Mobile</ion-card-title>
-            <ion-card-subtitle>Síncrono & Assíncrono</ion-card-subtitle>
-          </ion-card-header>
-          
-          <ion-card-content>
-            Here's a small text description for the card content. Nothing more, nothing less.
-          </ion-card-content>
-        </ion-card>
+          <ion-card>
+            <img alt="Computer with code progamation" src="https://images.pexels.com/photos/5380792/pexels-photo-5380792.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+            <ion-card-header>
+              <ion-card-title>Progamação Mobile</ion-card-title>
+              <ion-card-subtitle>Síncrono & Assíncrono</ion-card-subtitle>
+            </ion-card-header>
+            
+            <ion-card-content>
+              Here's a small text description for the card content. Nothing more, nothing less.
+            </ion-card-content>
+          </ion-card>
 
-      </ion-col>
-    </ion-row>
-    
+        </ion-col>
+      </ion-row>
+    </ng-container>
         <!-- Conteúdo Informática para Internet -->
+    <ng-container *ngIf="this.item_selecionado == 'informatica_internet'">
         <ion-row class="ion-justify-content-center">
           <ion-col size="4">
     
@@ -127,53 +129,56 @@
     
           </ion-col>
         </ion-row>
+      </ng-container>
 
             <!-- Conteúdo de Química -->
-    <ion-row class="ion-justify-content-center">
-      <ion-col size="4">
+    <ng-container *ngIf="this.item_selecionado == 'quimica'">
+      <ion-row class="ion-justify-content-center">
+        <ion-col size="4">
 
-        <ion-card>
-          <img alt="Computer with code progamation" src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg" />
-          <ion-card-header>
-            <ion-card-title>Progamação Mobile</ion-card-title>
-            <ion-card-subtitle>Ionic & Bootstrap</ion-card-subtitle>
-          </ion-card-header>
-          
-          <ion-card-content>
-            Here's a small text description for the card content. Nothing more, nothing less.
-          </ion-card-content>
-        </ion-card>
+          <ion-card>
+            <img alt="Computer with code progamation" src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg" />
+            <ion-card-header>
+              <ion-card-title>Química</ion-card-title>
+              <ion-card-subtitle>Ionic & Bootstrap</ion-card-subtitle>
+            </ion-card-header>
+            
+            <ion-card-content>
+              Here's a small text description for the card content. Nothing more, nothing less.
+            </ion-card-content>
+          </ion-card>
 
-      </ion-col>
-      <ion-col size="4">
+        </ion-col>
+        <ion-col size="4">
 
-        <ion-card>
-          <img alt="Computer with code progamation" src="https://images.pexels.com/photos/574069/pexels-photo-574069.jpeg?auto=compress&cs=tinysrgb&w=1600" />
-          <ion-card-header>
-            <ion-card-title>Progamação Mobile</ion-card-title>
-            <ion-card-subtitle>HTML & CSS</ion-card-subtitle>
-          </ion-card-header>
-          
-          <ion-card-content>
-            Here's a small text description for the card content. Nothing more, nothing less.
-          </ion-card-content>
-        </ion-card>
+          <ion-card>
+            <img alt="Computer with code progamation" src="https://images.pexels.com/photos/574069/pexels-photo-574069.jpeg?auto=compress&cs=tinysrgb&w=1600" />
+            <ion-card-header>
+              <ion-card-title>Progamação Mobile</ion-card-title>
+              <ion-card-subtitle>HTML & CSS</ion-card-subtitle>
+            </ion-card-header>
+            
+            <ion-card-content>
+              Here's a small text description for the card content. Nothing more, nothing less.
+            </ion-card-content>
+          </ion-card>
 
-      </ion-col>
-      <ion-col size="4">
+        </ion-col>
+        <ion-col size="4">
 
-        <ion-card>
-          <img alt="Computer with code progamation" src="https://images.pexels.com/photos/5380792/pexels-photo-5380792.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
-          <ion-card-header>
-            <ion-card-title>Progamação Mobile</ion-card-title>
-            <ion-card-subtitle>Síncrono & Assíncrono</ion-card-subtitle>
-          </ion-card-header>
-          
-          <ion-card-content>
-            Here's a small text description for the card content. Nothing more, nothing less.
-          </ion-card-content>
-        </ion-card>
+          <ion-card>
+            <img alt="Computer with code progamation" src="https://images.pexels.com/photos/5380792/pexels-photo-5380792.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+            <ion-card-header>
+              <ion-card-title>Progamação Mobile</ion-card-title>
+              <ion-card-subtitle>Síncrono & Assíncrono</ion-card-subtitle>
+            </ion-card-header>
+            
+            <ion-card-content>
+              Here's a small text description for the card content. Nothing more, nothing less.
+            </ion-card-content>
+          </ion-card>
 
-      </ion-col>
-    </ion-row>
+        </ion-col>
+      </ion-row>
+    </ng-container>
 </ion-content>

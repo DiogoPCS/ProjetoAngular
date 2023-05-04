@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { IonicModule } from '@ionic/angular';
 
@@ -6,10 +7,11 @@ import { IonicModule } from '@ionic/angular';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   standalone: true,
-  imports: [IonicModule],
+  imports: [IonicModule, CommonModule]
 })
 export class HomePage {
+  item_selecionado: string = 'desenvolvimento_sistemas';
   trocouCurso(event: any){
-    console.log(event['detail']['value']);
+    this.item_selecionado = event['detail']['value'];
   }
 }
