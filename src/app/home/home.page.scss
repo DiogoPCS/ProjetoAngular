@@ -1,27 +1,31 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+*{
+  border: 2px dashed green;
+  padding: 0;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+
+
+// LADO vermelho
+#checkbox_left {
+  --size: 32px;
+  margin: 3px;
+  --checkbox-background-checked: red;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+#checkbox_left::part(container) {
+  border-radius: 100%;
+  border: 2px solid red;
 }
 
-#container a {
-  text-decoration: none;
+
+// LADO azul
+#checkbox_right {
+  --size: 32px;
+  margin: 3px;
+  --checkbox-background-checked: blue;
+}
+
+#checkbox_right::part(container) {
+  border-radius: 100%;
+  border: 2px solid blue;
 }
