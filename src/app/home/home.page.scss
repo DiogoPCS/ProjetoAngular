@@ -1,27 +1,130 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
+// zerando margin e padding
+*{
   margin: 0;
+  padding: 0;
+}
+// colocando o formulario nomeio do lado esquerdo
+#right-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+// tamanho e fonte do label
+ion-label > h1{
+font-family: Arial, Helvetica, sans-serif;
+margin-top: 25%;
+font-size: 3em;
+font-weight: bold;
+}
+// Tamannho input
+ion-input{
+  width: 50%;
+  border-bottom: 1px solid black;
+}
+p{
+  margin-top: 5%;
+}
+// Distancia botao para os demais
+ion-button{
+  margin-top: 2%;
+  border-radius: 20px;
+  width: 25%;
+}
+// colocando os C do Criar e Conta maiusculo 
+
+.buttonConta{
+  margin-left: 5px;
+}
+// Criando responsividade quando atinge 1170px
+@media (max-width: 1170px) {
+  #left-side img {
+    width: 100vw;
+    height: auto;
+    max-width: none;
+  }
+  #right-side{
+    background-color: #fff;
+    align-items: center;
+    position: absolute;
+    top: 7%;
+    right: 20%;
+    opacity: 0.8;
+    border-radius: 15px;
+  }
+  ion-label > h1{
+    margin-top: 15%;
+  }
+  .buttonResponsive{
+    margin-bottom: 5%;
+  }
+}
+// Criando responsividade quando atinge 700px
+
+@media (max-width: 700px){
+  ion-button{
+    width: 40%;
+  }
+}
+// Criando responsividade quando atinge 640px
+@media (max-width: 640px){
+  ion-input{
+    width: 70%;
+  }
+  #left-side{
+    display: none;
+  }
+  #right-side{
+    border: 1px solid black;
+  }
+}
+// Criando responsividade quando atinge 530px
+
+@media (max-width: 530px){
+  ion-label > h1{
+    font-size: 1.5em;
+  }
+}
+// Criando responsividade quando atinge 460px
+
+@media (max-width: 460px){
+  #left-side{
+    display: none;
+  }
+  #right-side{
+    border: 1px solid black;
+  }
+}
+// Criando responsividade quando atinge 400px
+
+@media (max-width: 400px){
+  ion-button{
+    width: 80%;
+  }#right-side{
+    border: none;
+  }
+  ion-input{
+    width: 100%;
+  }
+}
+@media (max-width: 300px){
+  #right-side{
+    width: 100%;
+    border: none;
+  }
+  ion-input{
+    width: 100%;
+  }
+  
+}
+// Criando responsividade quando atinge 270px
+  
+@media (max-width: 270px){
+  ion-label > h1{
+    font-size: 1em;
+  }
+  ion-input{
+    width: 200px;
+  }
 }
 
-#container a {
-  text-decoration: none;
-}
+

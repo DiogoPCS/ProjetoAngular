@@ -1,22 +1,31 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-grid class="container-gid">
+  <ion-row>
+    <!-- Divisao do lado da imagem -->
+    <ion-col size="6" id="left-side">
+      <!-- Aqui fica a imagem, a imagem esta diferente por que noa achei a imagem do layout entao emprovissei -->
+      <img src="https://images.pexels.com/photos/2388650/pexels-photo-2388650.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
+      alt="Imagem de dois balões coloridos voando de dia com varias nuvens sobrevoando por cima de uma  floricultura" width="100%
+      ">
+    </ion-col>
+    <!-- Divisão do formulario -->
+    <ion-col size="6" id="right-side">
+      <ion-label>
+        <h1 style="text-transform: capitalize;">Criar Conta</h1>
+      </ion-label>
+      <ion-input type="text" label="Nome"></ion-input>
+      <ion-input type="email" label="Email"></ion-input>
+      <ion-input type="password" label="Senha"></ion-input>
+      <ion-input type="password" label="Confirmar Senha"></ion-input>
+      <ion-button onclick="clicou()"  class="buttonDobbleMaiuscula"  style="--background: rgb(0, 194, 168); --border-radius: 10px; margin-top: 5%; text-transform: capitalize;">
+        <span>Criar Conta</span> 
+      </ion-button>
+      <p>Login com</p>       
+      <ion-button shape="round"  style="--background: blue; text-transform: lowercase;"><span>Facebook</span></ion-button>     
+      <ion-button shape="round" color="secondary" style="text-transform: lowercase;"><span>Twitter</span></ion-button> 
+      <ion-button shape="round"  style="--background: rgb(122, 18, 18); text-transform: lowercase;" class="buttonResponsive
+      "><span>google</span></ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <h3>Projeto com Bootstrap e Ionic!</h3>
-    <hr>
-    <p>Componentes Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components"> - UI Components</a></p>
-    <p>Componentes Bootstrap <a target="_blank" rel="noopener noreferrer" href="https://getbootstrap.com/docs/5.3/components/buttons/"> - UI Components</a></p>
-  </div>
-</ion-content>
