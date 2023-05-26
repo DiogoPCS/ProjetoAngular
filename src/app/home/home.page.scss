@@ -1,27 +1,18 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+ion-content{
+  --background: rgb(217,50,94);
+--background: linear-gradient(90deg, rgba(217,50,94,1) 46%, rgba(0,0,0,1) 100%);
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.imagem{
+background-image:url('https://s2.glbimg.com/_SNwRBXpexCnbUTYdqcvJ_AXpXw=/0x0:1200x700/924x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2023/c/u/JMc0NrTZGew6dSglJMSQ/mario-bros.jpg');
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+.divisor{
+  height: 50vh;
+  overflow: hidden;
+  align-items: center;
 }
 
-#container a {
-  text-decoration: none;
-}
