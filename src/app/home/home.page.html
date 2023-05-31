@@ -1,22 +1,110 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <h3>Projeto com Bootstrap e Ionic!</h3>
-    <hr>
-    <p>Componentes Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components"> - UI Components</a></p>
-    <p>Componentes Bootstrap <a target="_blank" rel="noopener noreferrer" href="https://getbootstrap.com/docs/5.3/components/buttons/"> - UI Components</a></p>
-  </div>
+  <ion-row>
+    <ion-col size-lg="8" size-sm="12">
+      <ion-row class="conteudo-1">
+        <ion-col class="img-centro" size="4">
+          <img class="img"
+            src="https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
+        </ion-col>
+
+        <ion-col class="conteudo-2" size="8">
+          <ion-label>
+            <h1>{{ this.perfil.nome }}</h1>
+          </ion-label>
+
+          <ion-label>
+            <h3>{{ this.perfil.profissao }}</h3>
+          </ion-label><br><br><br><br><br><br>
+
+          <ion-row class="buttons">
+            <ion-col size="6">
+              <ion-button class="btn-1">Seguir</ion-button>
+            </ion-col>
+
+            <ion-col size="6">
+              <ion-button class="btn-2">Mensagem</ion-button>
+            </ion-col>
+          </ion-row>
+
+        </ion-col>
+      </ion-row>
+
+      <ion-row class="qtd">
+        <ion-col size="4">
+          <ion-label class="numero">{{ this.metricas_sociais.curtidas }}</ion-label><br>
+          <ion-label>Curtidas</ion-label>
+        </ion-col>
+        <ion-col size="4">
+          <ion-label class="numero">{{ this.metricas_sociais.seguidores }}</ion-label><br>
+          <ion-label>Seguindo</ion-label>
+        </ion-col>
+        <ion-col size="4">
+          <ion-label class="numero">{{ this.metricas_sociais.amigos }}</ion-label><br>
+          <ion-label>Amigos</ion-label>
+        </ion-col>
+      </ion-row>
+
+      <br>
+      <hr><br>
+
+      <ion-row>
+        <ion-col size="12" class="titulos">
+          <ion-label class="titulo-s">Sobre</ion-label><br>
+          <ion-label class="msg">{{ this.perfil.biografia }}</ion-label>
+        </ion-col>
+      </ion-row>
+
+      <br>
+      <hr><br>
+
+      <ion-row>
+        <ion-col size="12" class="titulos">
+          <ion-label class="titulo-s">Postagens de Amigos</ion-label>
+        </ion-col>
+      </ion-row><br>
+
+      <ng-container *ngFor="let card of this.postagens">
+        <ion-row class="padding-2">
+          <ion-col size="3">
+            <ng-container *ngIf="card.perfil.foto == null">
+              <img class="img-sm" src="https://img.icons8.com/?size=512&id=7819&format=png">
+            </ng-container>
+            <ng-container *ngIf="card.perfil.foto != null">
+              <img class="img-sm" src="{{ card.perfil.foto }}">
+            </ng-container>
+          </ion-col>
+
+          <ion-col size="9">
+            <ion-row>
+              <ion-col size-lg="2" size-sm="4">
+                <ion-label class="titulos-sm ">{{ card.perfil.nome }}</ion-label>
+              </ion-col>
+              <ion-col size-lg="8" size-sm="8">
+                <ion-label class="msg-sm">{{ card.perfil.mencao_perfil }}</ion-label>
+              </ion-col>
+            </ion-row><br>
+
+            <ion-row>
+              <ion-col size="11">
+                <ion-label class="msg-postagem">{{ card.postagem.mensagem }}</ion-label>
+              </ion-col>
+            </ion-row>
+
+            <ion-row>
+              <ion-col size="11">
+                <ng-container *ngIf="card.postagem.foto != null">
+                  <img class="img-postagem" src="{{ card.postagem.foto }}">
+                </ng-container>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+        </ion-row>
+
+        <br>
+        <hr><br>
+      </ng-container>
+    </ion-col>
+  </ion-row>
+
 </ion-content>
