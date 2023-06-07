@@ -1,27 +1,28 @@
-#container {
-  text-align: center;
 
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
+  ion-content {
+    --background: rgb(7,1,122);
+    --background: linear-gradient(115deg, rgba(103,108,252,1) 0%, rgba(91,168,230,1) 33%, rgba(0,212,255,1) 66%);
+  }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
+  .full-height {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
+  .img {
+    height: 100% auto;
+    width: 50rem;
+  }
 
-  color: #8c8c8c;
+  .card {
+    border-radius: 1.5em;
+    border: none;
+  }
 
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
-}
+  ion-item {
+    --background: white;
+    color: black;
+  }

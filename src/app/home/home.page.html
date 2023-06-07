@@ -1,22 +1,30 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <h3>Projeto com Bootstrap e Ionic!</h3>
-    <hr>
-    <p>Componentes Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components"> - UI Components</a></p>
-    <p>Componentes Bootstrap <a target="_blank" rel="noopener noreferrer" href="https://getbootstrap.com/docs/5.3/components/buttons/"> - UI Components</a></p>
-  </div>
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="10" size-lg="6" class="ion-text-center full-height">
+
+      <!-- Formulário de Login -->
+      <ion-row>
+        <ion-col size="12">
+          <ion-card class="card">
+            <img class="img" src="https://images.pexels.com/photos/552788/pexels-photo-552788.jpeg?auto=compress&cs=tinysrgb&w=1600">
+            <ion-card-content>
+              <ion-item>
+                <ion-input label="Usuário"></ion-input>
+              </ion-item>
+              <ion-item>
+                <ion-input label="Senha"></ion-input>
+              </ion-item>
+              <ion-button routerLink="/main-page">
+                <ion-icon name="lock-closed-outline"></ion-icon>
+                &nbsp; Acessar
+              </ion-button>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+
+    </ion-col>
+  </ion-row>
+
 </ion-content>
