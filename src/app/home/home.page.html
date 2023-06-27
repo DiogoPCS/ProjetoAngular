@@ -1,22 +1,49 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-content>
+  <div class="container">
+    <ion-row>
+      <ion-col size="12" class="main">
+        <br> 
+  
+        <div class="calculadora">
+          <ion-input placeholder="0" readonly="true" class="resultado" id="resultado"></ion-input>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+          <br>
 
-  <div id="container">
-    <h3>Projeto com Bootstrap e Ionic!</h3>
-    <hr>
-    <p>Componentes Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components"> - UI Components</a></p>
-    <p>Componentes Bootstrap <a target="_blank" rel="noopener noreferrer" href="https://getbootstrap.com/docs/5.3/components/buttons/"> - UI Components</a></p>
+          <ion-row>
+            <ion-button color="light" (click)="this.calcular('acao', 'c')">C</ion-button>
+            <ion-button color="light" (click)="this.calcular('acao', '%')">%</ion-button>
+            <ion-button color="light" (click)="this.calcular('acao', '/')">/</ion-button>
+            <ion-button color="light" (click)="this.calcular('acao', '*')">x</ion-button>
+          </ion-row>
+  
+          <ion-row>
+            <ion-button color="light" (click)="this.calcular('valor', 7)">7</ion-button>
+            <ion-button color="light" (click)="this.calcular('valor', 8)">8</ion-button>
+            <ion-button color="light" (click)="this.calcular('valor', 9)">9</ion-button>
+            <ion-button color="light" (click)="this.calcular('acao', '-')">-</ion-button>
+          </ion-row>
+  
+          <ion-row>
+            <ion-button color="light" (click)="this.calcular('valor', 4)">4</ion-button>
+            <ion-button color="light" (click)="this.calcular('valor', 5)">5</ion-button>
+            <ion-button color="light" (click)="this.calcular('valor', 6)">6</ion-button>
+            <ion-button color="light" (click)="this.calcular('acao', '+')">+</ion-button>
+          </ion-row>
+  
+          <ion-row>
+            <ion-button color="light" (click)="this.calcular('valor', 1)">1</ion-button>
+            <ion-button color="light" (click)="this.calcular('valor', 2)">2</ion-button>
+            <ion-button color="light" (click)="this.calcular('valor', 3)">3</ion-button>
+            <ion-button class="enter" color="light" (click)="this.calcular('acao', '=');">=</ion-button>
+          </ion-row>
+  
+          <ion-row style="margin-top: -60px;">
+            <ion-button class="zero" color="light" (click)="this.calcular('valor', 0)">0</ion-button>
+            <ion-button color="light" (click)="this.calcular('acao', ',')">,</ion-button>
+          </ion-row>
+
+        </div>
+      </ion-col>
+    </ion-row>
   </div>
 </ion-content>
