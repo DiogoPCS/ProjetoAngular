@@ -1,22 +1,22 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+ 
+  
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="12" size-lg="2">
+      <ion-row>
+        <ng-container *ngFor="let numero of numberButtons"> 
+          <ng-container *ngFor="let operacao of operatorButtons"> 
+            <ion-col size="3">
+                <ion-button color="primary" (click)="exibir({{numero}})">{{numero}}</ion-button>
+                <ion-button color="dark" (click)="calcular({{resultado}})">{{numero}}</ion-button>
+            </ion-col>
+        </ng-container>
+      </ng-container>
+      </ion-row>
+    </ion-col>
+  </ion-row>
 
-  <div id="container">
-    <h3>Projeto com Bootstrap e Ionic!</h3>
-    <hr>
-    <p>Componentes Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components"> - UI Components</a></p>
-    <p>Componentes Bootstrap <a target="_blank" rel="noopener noreferrer" href="https://getbootstrap.com/docs/5.3/components/buttons/"> - UI Components</a></p>
-  </div>
+  
 </ion-content>
+
