@@ -1,126 +1,136 @@
 <ion-content [fullscreen]="true">
   <ion-row class="ion-justify-content-center">
-    <ion-col size="10" size-lg="4" class="ion-text-center">
-
-        
+    <ion-col sizeLg="4" sizeMd="4" sizeSm="12" class="ion-text-center">
 
       <!-- Conta -->
-      <ion-row class="result">
-        <ion-col size="12"> <!-- col do lado da direita-->
-         <ion-label>
-          trdtrj
-         </ion-label>
+
+      <ion-row class="container">
+        <ion-col>
+          <ion-row class="result">
+            <ion-col size="12"> <!-- col do lado da direita-->
+              <ion-label>
+                {{ this.resultado }}
+              </ion-label>
+            </ion-col>
+          </ion-row>
+
+          <!-- Parte de digitar os numeros -->
+
+          <ion-row class="item">
+            <ion-col size="12"> <!-- col do lado da direita-->
+
+              <ion-row>
+                <ion-col offset="9" size="3">
+                  <ion-button class="back" fill="clear" (click)="apagaUltimo()" >
+                    <ion-icon name="backspace-outline" size="large"></ion-icon>
+                  </ion-button>
+                </ion-col>
+              </ion-row>
+
+              <ion-row> <!-- primeira linha da calculadora-->
+                <ion-col size="3">
+                  <ion-button class="buttonPrimeiraLinha" (click)="clear()">C</ion-button>
+                </ion-col>
+
+                <ion-col size="3">
+                  <ion-label>
+                    <ion-button class="buttonPrimeiraLinha" (click)="exibir('+/-')">+/-</ion-button>
+                  </ion-label>
+                </ion-col>
+
+                <ion-col size="3">
+                  <ion-label>
+                    <ion-button class="buttonPrimeiraLinha" (click)="exibir('%')">%</ion-button>
+                  </ion-label>
+                </ion-col>
+
+                <ion-col size="3">
+                  <ion-label>
+                    <ion-button class="buttonultimaColuna" (click)="exibir('/')">/</ion-button>
+                  </ion-label>
+                </ion-col>
+
+              </ion-row>
+
+              <ion-row> <!--Segunda linha da calculadora-->
+                <ion-col size="3">
+                  <ion-button class="buttoNumeros" (click)="exibir(7)">7</ion-button>
+                </ion-col>
+
+                <ion-col size="3">
+                  <ion-label>
+                    <ion-button class="buttoNumeros" (click)="exibir('8')">8</ion-button>
+                  </ion-label>
+                </ion-col>
+
+                <ion-col size="3">
+                  <ion-label>
+                    <ion-button class="buttoNumeros" (click)="exibir('9')">9</ion-button>
+                  </ion-label>
+                </ion-col>
+
+                <ion-col size="3">
+                  <ion-label>
+                    <ion-button class="buttonultimaColuna" (click)="exibir('X')">X</ion-button>
+                  </ion-label>
+                </ion-col>
+
+              </ion-row>
+
+              <ion-row> <!--Terceira linha da calculadora-->
+                <ion-col size="3">
+                  <ion-button class="buttoNumeros" (click)="exibir('4')">4</ion-button>
+                </ion-col>
+
+                <ion-col size="3">
+                  <ion-button class="buttoNumeros" (click)="exibir('5')">5</ion-button>
+                </ion-col>
+
+                <ion-col size="3">
+                  <ion-button class="buttoNumeros" (click)="exibir('6')">6</ion-button>
+                </ion-col>
+
+                <ion-col size="3">
+                  <ion-button class="buttonultimaColuna" (click)="exibir('-')">-</ion-button>
+                </ion-col>
+              </ion-row>
+
+              <ion-row> <!--Quarta linha da calculadora-->
+                <ion-col size="3">
+                  <ion-button class="buttoNumeros" (click)="exibir('1')">1</ion-button>
+                </ion-col>
+
+                <ion-col size="3">
+                  <ion-button class="buttoNumeros" (click)="exibir('2')">2</ion-button>
+                </ion-col>
+
+                <ion-col size="3">
+                  <ion-button class="buttoNumeros" (click)="exibir('3')">3</ion-button>
+                </ion-col>
+
+                <ion-col size="3">
+                  <ion-button class="buttonultimaColuna" (click)="exibir('+')">+</ion-button>
+                </ion-col>
+              </ion-row>
+
+              <ion-row> <!--Quinta linha da calculadora-->
+                <ion-col size="6">
+                  <ion-button class="buttonUltimaLinha" (click)="exibir('0')">0</ion-button>
+                </ion-col>
+
+                <ion-col size="3">
+                  <ion-button class="buttoNumeros" (click)="exibir('.')">.</ion-button>
+                </ion-col>
+
+                <ion-col size="3">
+                  <ion-button class="buttonultimaColuna" (click)="exibir('=')">=</ion-button>
+                </ion-col>
+              </ion-row>
+
+            </ion-col>
+          </ion-row>
         </ion-col>
       </ion-row>
-
-      <!-- Parte de digitar os numeros -->
-      <ion-row>
-        <ion-col size="12"> <!-- col do lado da direita-->
-
-          <ion-row>  <!-- primeira linha da calculadora-->
-            <ion-col size="3">
-              <ion-button class="buttonPrimeiraLinha" >C</ion-button>
-            </ion-col>
-            
-            <ion-col size="3">
-              <ion-label>
-                <ion-button class="buttonPrimeiraLinha">+/-</ion-button>
-              </ion-label>
-            </ion-col>
-
-            <ion-col size="3">
-              <ion-label>
-                <ion-button class="buttonPrimeiraLinha" >%</ion-button>
-              </ion-label>
-            </ion-col>
-
-            <ion-col size="3">
-              <ion-label>
-                <ion-button class="buttonultimaColuna" >/</ion-button>
-              </ion-label>
-            </ion-col>
-
-          </ion-row>
-
-          <ion-row>  <!--Segunda linha da calculadora-->
-            <ion-col size="3">
-              <ion-button class="buttoNumeros" >7</ion-button>
-            </ion-col>
-            
-            <ion-col size="3">
-              <ion-label>
-                <ion-button class="buttoNumeros" >8</ion-button>
-              </ion-label>
-            </ion-col>
-
-            <ion-col size="3">
-              <ion-label>
-                <ion-button class="buttoNumeros" >9</ion-button>
-              </ion-label>
-            </ion-col>
-
-            <ion-col size="3">
-              <ion-label>
-                <ion-button class="buttonultimaColuna" >=</ion-button>
-              </ion-label>
-            </ion-col>
-
-          </ion-row>
-
-          <ion-row>  <!--Terceira linha da calculadora-->
-            <ion-col size="3">
-              <ion-button class="buttoNumeros" >4</ion-button>
-            </ion-col>
-            
-            <ion-col size="3">
-              <ion-button class="buttoNumeros" >5</ion-button>
-            </ion-col>
-
-            <ion-col size="3">
-                <ion-button class="buttoNumeros" >6</ion-button>
-            </ion-col>
-
-            <ion-col size="3">
-              <ion-button class="buttonultimaColuna" >=</ion-button>
-            </ion-col>
-
-          </ion-row>
-
-          <ion-row>  <!--Quarta linha da calculadora-->
-            <ion-col size="3">
-                <ion-button class="buttoNumeros" >1</ion-button>
-            </ion-col>
-            
-            <ion-col size="3">
-                <ion-button class="buttoNumeros" >2</ion-button>
-            </ion-col>
-
-            <ion-col size="3">
-                <ion-button class="buttoNumeros" >3</ion-button>
-            </ion-col>
-
-            <ion-col size="3">
-              <ion-button class="buttonultimaColuna" >=</ion-button>
-            </ion-col>
-          </ion-row>
-
-          <ion-row>  <!--Quinta linha da calculadora-->
-            <ion-col size="6">
-              <ion-button class="buttonUltimaLinha" >0</ion-button>
-            </ion-col>
-            
-            <ion-col size="3">
-              <ion-button class="buttoNumeros" >,</ion-button>
-            </ion-col>
-
-            <ion-col size="3">
-              <ion-button class="buttonultimaColuna" >=</ion-button>
-            </ion-col>
-          </ion-row>
-
-        </ion-col>
-      </ion-row>
-
-     </ion-col>
-    </ion-row>
+    </ion-col>
+  </ion-row>
 </ion-content>
