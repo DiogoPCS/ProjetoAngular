@@ -12,6 +12,7 @@ import { IonicModule } from '@ionic/angular';
 
 export class HomePage {
   result: string = '';
+  
 
   acmAdd(item: string){
     this.result += item 
