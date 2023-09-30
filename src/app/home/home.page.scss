@@ -1,27 +1,57 @@
-#container {
+#container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.centro{
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-wrap: wrap;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+.img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-#container a {
-  text-decoration: none;
+
+ion-button{
+  --color:var(--ion-color-primary);
+  --background: var(--ion-color-light);
+  --color-hover: var(--ion-color-primary);
+  --font-weight: bolder;
+  border-radius: 50px;
+}
+
+.input{
+  width: 100%;
+  margin-bottom: 3em;
+}
+
+input{
+  color: var(--ion-color-primary);
+  width: 50%;
+  padding: 7px 20px;
+  border: 1px solid #ccc; 
+  border-radius: 25px; 
+  background-color: var(--ion-color-light);
+  outline: none; 
+  transition: border-color 0.3s;
+}
+
+input:focus {
+  border: 2px solid var(--ion-color-primary);
+}
+
+input:focus::placeholder {
+  color: var(--ion-color-primary)
 }

@@ -1,0 +1,29 @@
+.container{
+    max-height: 690px;
+    width: 450px;
+}
+
+.centro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ion-row{
+    margin-bottom: 20px;
+}
+
+ion-title{
+    color: var(--ion-color-primary);
+    font-size: 2em;
+    font-weight: bolder;
+    margin-top: 15px;
+}
+
+ion-button{
+    font-size: 1.2em;
+}
+
+ion-icon{
+    color: var(--ion-color-primary);
+}

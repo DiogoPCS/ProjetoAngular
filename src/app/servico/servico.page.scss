@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Dancing+Script&display=swap');
+
+// Menu
+a{
+    color: var(--ion-color-light);
+    text-decoration: none;
+    font-size: 1.4em;
+    margin: 3em 0.5em;
+}
+
+a:hover{
+    color: var(--ion-color-secondary);
+}
+
+// Seviço
+
+#container{
+    min-height: calc(100vh - 112px);
+}
+
+.logo{
+    height: 48px;
+    margin-left: 25px;
+}
+
+.tituloPagina{
+    font-size: 3em;
+    text-align: center;
+    font-family: 'Abril Fatface', cursive;
+}
+
+.elementos{
+    background: var(--ion-color-tertiary);
+    border-radius: 2.5em;
+    margin: 2em;
+    padding: 0.8em 3.5em;
+}
+
+.primeiraLinha{
+    display: flex;
+    justify-content: space-between;
+}
+
+.botoes{
+    display: flex;
+}
+
+.divTitulo{
+    display: flex;
+    justify-content: center;
+}
+
+.titulo{
+    font-weight: bolder;
+    font-size: 1.5em;
+}
+
+.elemento{
+    border-bottom: 1px solid var(--ion-color-primary);
+    margin-top: 8px;
+    height: 15vh;
+}
+
+.elemento:last-child{
+    padding-top: 10px;
+    border-bottom: none;
+}

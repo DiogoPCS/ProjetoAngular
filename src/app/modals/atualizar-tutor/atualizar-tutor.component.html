@@ -1,0 +1,56 @@
+<div class="container">
+  <ion-row>
+      <ion-col size="12" class="centro">
+          <ion-title class="ion-text-center">Atualizar</ion-title>
+      </ion-col>
+  </ion-row>
+  <ion-row>
+      <ion-col size="12" class="ion-padding centro">
+          <label for="nome" class="etiqueta">Nome</label>
+          <input type="text" name="nome" id="nome" class="input" [(ngModel)]="nome">
+      </ion-col>
+  </ion-row>
+  <ion-row>
+      <ion-col size="12" class="ion-padding centro">
+          <label for="cpf" class="etiqueta">CPF</label>
+          <input type="number" name="cpf" id="cpf" class="input" [(ngModel)]="cpf">
+      </ion-col>
+  </ion-row>
+  <ion-row>
+      <ion-col size="12" class="ion-padding centro">
+          <label for="telefone" class="etiqueta">Telefone</label>
+          <input type="number" name="telefone" id="telefone" class="input" [(ngModel)]="telefone">
+      </ion-col>
+  </ion-row>
+  <ion-row>
+      <ion-col size="12" class="ion-padding centro">
+          <label for="data_nasc" class="etiqueta">Data de nascimento</label>
+          <input type="date" name="data_nasc" id="data_nasc" class="input" [(ngModel)]="data_nasc">
+      </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12" class="ion-padding centro">
+        <label for="endereco" class="etiqueta">Endereço</label>
+        <input type="text" name="endereco" id="endereco" class="input" [(ngModel)]="endereco">
+    </ion-col>
+</ion-row>
+<ion-row>
+  <ion-col size="12" class="ion-padding centro">
+      <label for="email" class="etiqueta">E-mail</label>
+      <input type="email" name="email" id="email" class="input" [(ngModel)]="email">
+  </ion-col>
+</ion-row>
+<ion-row>
+  <ion-col size="12" class="ion-padding centro">
+      <label for="senha" class="etiqueta">Senha</label>
+      <input type="password" name="senha" id="senha" class="input" [(ngModel)]="senha">
+  </ion-col>
+</ion-row>
+  <ion-row>
+      <ion-col size="12" class="ion-text-center ion-padding botao">
+          <ion-button shape="round"  (click)="atualizarTutor(customData.cod_tutor)">Salvar</ion-button>
+      </ion-col>
+  </ion-row>
+</div>
+
+

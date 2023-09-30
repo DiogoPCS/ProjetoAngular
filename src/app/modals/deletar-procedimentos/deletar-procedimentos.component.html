@@ -1,0 +1,27 @@
+<!-- <p>Parâmetro recebido: {{ customData }}</p> -->
+
+<div class="container">
+  <ion-row>
+      <ion-col size="12" class="centro">
+          <ion-icon name="trash"></ion-icon>
+      </ion-col>
+  </ion-row>
+  <ion-row>
+      <ion-col size="12" class="centro">
+          <h1 class="ion-text-center">Você tem certeza?</h1>
+      </ion-col>
+  </ion-row>
+  <ion-row>
+      <ion-col size="12" class="centro">
+          <p>Você realmente quer deletar esse registro? Essa ação é irreversível.</p>
+      </ion-col>
+  </ion-row>
+  <ion-row>
+      <ion-col size="12" class="ion-text-center ion-padding botao">
+          <ion-button shape="round" id="cancelar" color="tertiary" (click)="closeModal()">Cancelar</ion-button>
+          <ion-button shape="round" id="deletar" (click)="deletarProcedimentos(customData.cod_tipoProcedimento)">Deletar</ion-button>
+      </ion-col>
+  </ion-row>
+</div>
+
+

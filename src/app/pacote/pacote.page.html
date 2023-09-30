@@ -1,0 +1,121 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary" id="main-content">
+    <a href="../agenda/">
+      <img src="../../assets/img/Logo_sem_nome.png" alt="Logo da Prudente Casa Pet" class="logo">
+    </a>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar color="primary" id="main-content">
+      <ion-title>Pacote</ion-title>
+      <ion-buttons slot="end">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+<div id="container">
+
+  <ion-menu side="end" contentId="main-content">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content color="primary" class="ion-padding">
+      <div><a href="../home">Agenda</a></div>
+      <div><a href="../pet">Pets</a></div>
+      <div><a href="../tutor">Tutores</a></div>
+      <div><a href="../procedimentos">Tipos de procedimento</a></div>
+      <div><a href="../pacote">Pacotes</a></div>
+      <div><a href="">Pagamento</a></div>
+      <div><a href="../servico">Serviços</a></div>
+    </ion-content>
+  </ion-menu>
+
+  <ion-row>
+    <ion-col size="3" class="divInicio"></ion-col>
+    <ion-col size="6" class="divInicio"><ion-title class="tituloPagina">Pacotes - Aysha</ion-title></ion-col>
+    <ion-col size="3" class="divInicio fab">
+      <ion-fab>
+        <ion-fab-button>
+          <ion-icon name="add"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col size="12">
+      <div class="elementos">
+
+          <div class="elemento">
+            <div class="primeiraLinha">
+              <p class="titulo">Pacote 4 diárias</p>
+              <div class="botoes">
+                <ion-fab-button size="small">
+                  <ion-icon name="trash"></ion-icon>
+                </ion-fab-button>
+
+              </div>
+            </div>
+            <div class="segundaLinha">
+              <ul>
+                <li><b>Quantidade de diárias:</b> 4</li>
+                <li><b>Diárias disponíveis:</b> 3</li>
+              </ul>
+            </div>
+        </div>
+        
+        <div class="elemento">
+          <div class="primeiraLinha">
+            <p class="titulo">Pacote Páscoa</p>
+            <div class="botoes">
+              <ion-fab-button size="small">
+                <ion-icon name="trash"></ion-icon>
+              </ion-fab-button>
+
+            </div>
+          </div>
+          <div class="segundaLinha">
+            <ul>
+              <li><b>Quantidade de diárias:</b> 4</li>
+                <li><b>Diárias disponíveis:</b> 3</li>
+            </ul>
+          </div>
+      </div>
+      
+      <div class="elemento">
+        <div class="primeiraLinha">
+          <p class="titulo">Pacote Natal</p>
+          <div class="botoes">
+            <ion-fab-button size="small">
+              <ion-icon name="trash"></ion-icon>
+            </ion-fab-button>
+
+          </div>
+        </div>
+        <div class="segundaLinha">
+          <ul>
+            <li><b>Quantidade de diárias:</b> 4</li>
+            <li><b>Diárias disponíveis:</b> 3</li>
+          </ul>
+        </div>
+    </div>
+
+      </div>
+    </ion-col>
+  </ion-row>
+
+</div>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+  </ion-toolbar>
+</ion-footer>
+</ion-content>

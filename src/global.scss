@@ -24,3 +24,14 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
+
+
+// Deixa modais arrendodados e define o tamanho
+ion-modal::part(content) {
+    border-radius: 50px; 
+    max-height: 100vh;
+    height: auto;
+    min-width: 450px;
+    width: auto;
+}
+

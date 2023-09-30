@@ -1,0 +1,76 @@
+<div class="container">
+    <ion-row>
+        <ion-col size="12" class="centro">
+            <ion-title class="ion-text-center">Atualizar</ion-title>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col size="12" class="ion-padding centro">
+            <label for="nome" class="etiqueta">Nome</label>
+            <input type="text" name="nome" id="nome" class="input" [(ngModel)]="nome">
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col size="12" class="ion-padding centro">
+            <label for="tutor" class="etiqueta">Tutor</label>
+            <input type="text" name="tutor" id="tutor" list="tutores" class="input" [(ngModel)]="tutor" (blur)="procurarTutor()">
+            <datalist id="tutores" *ngIf="verificarArray(getAPI('listar', 'tutor', ''))===true">
+                <ng-container *ngFor="let tutor of getAPI('listar', 'tutor', '')">
+                    <option value="{{tutor.nome}}">{{tutor.nome}}</option>
+                </ng-container>
+            </datalist>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col size="12" class="ion-padding centro">
+            <label for="especie" class="etiqueta">Espécie</label>
+            <input type="text" name="especie" id="especie" class="input" [(ngModel)]="especie">
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col size="12" class="ion-padding centro">
+            <label for="raca" class="etiqueta">Raça</label>
+            <input type="text" name="raca" id="raca" class="input" [(ngModel)]="raca">
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col size="12" class="ion-padding centro">
+            <label for="porte" class="etiqueta">Porte</label>
+            <select name="porte" id="porte" class="input" [(ngModel)]="porte">
+                <option value="P">Pequeno</option>
+                <option value="M">Médio</option>
+                <option value="G">Grande</option>
+            </select>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col size="12" class="ion-padding centro">
+            <label for="sociabilidade" class="etiqueta">Sociabilidade</label>
+            <ion-radio-group value="sim" name="sociabilidade" id="sociabilidade" [(ngModel)]="sociabilidade">
+                <ion-radio value="0" labelPlacement="end">Sim</ion-radio>
+                <ion-radio value="1" labelPlacement="end">Não</ion-radio>
+            </ion-radio-group>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col size="12" class="ion-padding centro">
+            <label for="observacoes" class="etiqueta">Observação</label>
+            <input type="text" name="observacoes" id="observacoes" class="input" [(ngModel)]="observacoes">
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col size="12" class="ion-padding centro">
+            <label for="foto_perfil" class="etiqueta">Foto de Perfil</label>
+            <label for="foto_perfil" id="file">
+                <input type="file" name="foto_perfil" id="foto_perfil" (change)="onFileSelected($event)" >
+                <span>{{arquivo}}</span>
+                <ion-icon name="share-outline"></ion-icon>
+            </label>
+        </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col size="12" class="ion-text-center ion-padding botao">
+            <ion-button shape="round" (click)="atualizarPet(customData.cod_pet)">Salvar</ion-button>
+        </ion-col>
+    </ion-row>
+</div>

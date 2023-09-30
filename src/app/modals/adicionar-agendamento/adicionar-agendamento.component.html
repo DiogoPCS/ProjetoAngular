@@ -1,0 +1,138 @@
+<div class="container">
+  <ion-row>
+      <ion-col size="12">
+          <p class="data">{{customData}}</p>
+      </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="6" class="centro">
+        <ion-title class="ion-text-center ativo">Adicionar</ion-title>
+    </ion-col>
+    <ion-col size="6" class="centro">
+        <ion-title class="ion-text-center">Agendamentos</ion-title>
+    </ion-col>
+    </ion-row>
+  <ion-row>
+    <ion-col size="12" class="ion-padding centro">
+        <label for="tutor" class="etiqueta">Tutor</label>
+        <input type="text" name="tutor" id="tutor" list="tutores" class="input" [(ngModel)]="tutor" (blur)="procurarTutor()">
+        <datalist id="tutores" *ngIf="verificarArray(getAPI('listar', 'tutor', ''))===true">
+            <ng-container *ngFor="let tutor of getAPI('listar', 'tutor', '')">
+                <option value="{{tutor.nome}}">{{tutor.nome}}</option>
+            </ng-container>
+        </datalist>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12" class="ion-padding centro">
+      <label for="cod_pet" class="etiqueta">Pet</label>
+      <ng-container *ngIf="!tutorSelecionado && verificarArray(getAPI('listar', 'pet_tutor', cod_tutor))===true">
+        <select name="cod_pet" id="cod_pet" class="input" [(ngModel)]="cod_pet">
+            <ng-container *ngFor="let pet of getAPI('listar', 'pet_tutor', cod_tutor)">
+              <option value="{{pet.cod_pet}}">{{pet.nome}}</option>
+            </ng-container>
+          </select>
+      </ng-container>
+      <ng-container *ngIf="tutorSelecionado || verificarArray(getAPI('listar', 'pet_tutor', cod_tutor))===false">
+        <select name="cod_pet" id="cod_pet" class="input" [(ngModel)]="cod_pet">
+            <option value=''>Pet não selecionado</option>
+        </select>
+      </ng-container>
+  </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12" class="ion-padding centro">
+        <label for="servico" class="etiqueta">Servico</label>
+        <select name="servico" id="servico" class="input" [(ngModel)]="servico" (change)="gerarValor()">
+            <option value="1">Day Care</option>
+            <option value="2">Hospedagem</option>
+        </select>
+    </ion-col>
+  </ion-row>
+  <ion-row *ngIf="servico === '2'">
+    <ion-col size="12" class="ion-padding centro">
+        <label for="data_saida" class="etiqueta">Data de Saída</label>
+        <input type="date" name="data_saida" id="data_saida" class="input" [(ngModel)]="data_saida" (change)="gerarValor()">
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12" class="ion-padding centro">
+      <label for="qtd_banho" class="etiqueta">Banho</label>
+      <ng-container *ngIf="servico === '1'">
+        <select name="qtd_banho" id="qtd_banho" class="input" [(ngModel)]="qtd_banho">
+            <option value="1">Sim</option>
+            <option value="0">Não</option>
+          </select>
+      </ng-container>
+      <ng-container *ngIf="servico === '2'">
+        <input type="number" name="qtd_banho" id="qtd_banho" class="input" [(ngModel)]="qtd_banho">
+      </ng-container>
+  </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12" class="ion-padding centro">
+        <label for="observacao" class="etiqueta">Observação</label>
+        <input type="text" name="observacao" id="observacao" class="input" [(ngModel)]="observacao">
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12" class="ion-padding centro">
+      <label for="cod_pacote" class="etiqueta">Pacote</label>
+      <ng-container *ngIf="cod_pet !== ''">
+        <select name="cod_pacote" id="cod_pacote" class="input" [(ngModel)]="cod_pacote">
+            <ng-container *ngFor="let pacote of getAPI('listar', 'pacote_pet', cod_pet)">
+              <option value=''>Nenhum pacote</option>
+              <option value="{{pacote.cod_pacote}}">{{pacote.nome}}</option>
+            </ng-container>
+          </select>
+      </ng-container>
+      <ng-container *ngIf="cod_pet === ''">
+        <select name="cod_pacote" id="cod_pacote" class="input" [(ngModel)]="cod_pacote">
+            <option value=''>Pet não selecionado</option>
+        </select>
+      </ng-container>
+  </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="6" class="ion-padding centro">
+      <label for="status" class="etiqueta">Pagamento Efetuado</label>
+    </ion-col>
+    <ion-col size="6" class="ion-padding centro" *ngIf="cod_pacote === ''">
+      <ion-toggle color="primary" name="status" id="status" [(ngModel)]="status"></ion-toggle>
+    </ion-col>
+    <ion-col size="6" class="ion-padding centro" *ngIf="cod_pacote !== ''">
+      <ion-toggle [checked]="true" [disabled]="true"></ion-toggle>
+    </ion-col>
+  </ion-row>
+  <ng-container *ngIf="status && cod_pacote === ''">
+  <ion-row>
+    <ion-col size="12" class="ion-padding centro">
+      <label for="valor" class="etiqueta">Valor</label>
+      <p class="input">{{valor}}</p>
+  </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12" class="ion-padding centro">
+        <label for="forma" class="etiqueta">Desconto</label>
+        <input type="number" name="desconto" id="desconto" class="input" [(ngModel)]="desconto">
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12" class="ion-padding centro">
+        <label for="valor_total" class="etiqueta">Valor Total</label>
+        <p class="input">{{valor_total}}</p>
+      </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12" class="ion-padding centro">
+        <label for="forma" class="etiqueta">Forma</label>
+        <input type="text" name="forma" id="forma" class="input" [(ngModel)]="forma">
+    </ion-col>
+  </ion-row>
+  </ng-container>
+  <ion-row>
+      <ion-col size="12" class="ion-text-center ion-padding botao">
+          <ion-button shape="round" (click)="adicionarAgendamento()">Salvar</ion-button>
+      </ion-col>
+  </ion-row>
+</div>

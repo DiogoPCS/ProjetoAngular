@@ -1,0 +1,61 @@
+.container{
+    max-height: 690px;
+    width: 600px;
+    overflow-y: scroll;
+}
+
+.container::-webkit-scrollbar {
+    width: 0.2em;
+}
+
+.container::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background-color: var(--ion-color-tertiary);
+    border-radius: 3px;
+}
+
+ion-col{
+    padding-bottom: 5px;
+}
+
+ion-icon{
+    font-size: 5em;
+    color: var(--ion-color-quartenary);
+    margin-top: 30px;
+}
+
+h1{
+    color: #000000;
+    font-size: 2em;
+    text-wrap: wrap;
+    font-weight: bolder;
+    margin: 30px 0;
+}
+
+ion-button{
+    --background: var(--ion-color-quartenary);
+    --font-weight: bolder;
+    border-radius: 50px;
+}
+
+.botao{
+    margin-bottom: 15px;
+}
+
+.centro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#cancelar{
+    margin-right: 10px;
+}
+
+#deletar{
+    margin-left: 10px;
+}

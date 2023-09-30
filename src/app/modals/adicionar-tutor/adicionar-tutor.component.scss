@@ -1,0 +1,114 @@
+.container{
+    max-height: 95vh;
+    width: 600px;
+    overflow-y: scroll;
+}
+
+.container::-webkit-scrollbar {
+    width: 0.2em;
+}
+
+.container::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background-color: var(--ion-color-tertiary);
+    border-radius: 3px;
+}
+
+ion-col{
+    padding-bottom: 5px;
+}
+
+ion-title{
+    color: var(--ion-color-quartenary);
+    font-size: 2.5em;
+    font-weight: bolder;
+}
+
+ion-button{
+    --background: var(--ion-color-quartenary);
+    --font-weight: bolder;
+    border-radius: 50px;
+}
+
+ion-radio-group{
+    width: 95%;
+    padding: 4px 15px 0 15px;
+}
+
+ion-radio{
+    margin-right: 60px;
+    font-size: 1.2em;
+}
+
+.botao{
+    margin-bottom: 15px;
+}
+
+.centro{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.etiqueta{
+    font-weight: bolder;
+    font-size: 1.4em;
+    width: 95%;
+    margin-left: 8px;
+}
+
+.input{
+    color: #000000;
+    width: 95%;
+    padding: 0 15px;
+    border: 1px solid #ccc; 
+    border-radius: 15px; 
+    background-color: var(--ion-color-tertiary);
+    outline: none; 
+    transition: border-color 0.3s;
+}
+
+.input:focus {
+    border: 1px solid var(--ion-color-primary);
+}
+
+.input:focus::placeholder {
+    color: var(--ion-color-primary)
+}
+
+#file{
+    color: #000000;
+    width: 95%;
+    padding: 2px 15px;
+    border: 1px solid #ccc; 
+    border-radius: 15px; 
+    background-color: var(--ion-color-tertiary);
+    outline: none; 
+    transition: border-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#file ion-icon{
+    font-size: 18px;
+}
+
+#foto_perfil{
+    display: none;
+}
+
+option{
+    background: var(--ion-color-light);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 0s 600000s, color 0s 600000s;
+}
+
+

@@ -1,0 +1,159 @@
+// Menu
+a{
+  color: var(--ion-color-light);
+  text-decoration: none;
+  font-size: 1.4em;
+  margin: 3em 0.5em;
+}
+
+a:hover{
+  color: var(--ion-color-secondary);
+}
+
+
+// Calendário
+
+#container{
+  min-height: calc(100vh - 112px);
+}
+
+.logo{
+  height: 48px;
+  margin-left: 25px;
+}
+
+.calendario{
+  background: #e7e7e7;
+  padding: 1em 1em 0.1em 1em;
+  margin: 2em;
+  border-radius: 4em;
+}
+
+.cabecalho{
+  width: 100%;
+  height: 9vh;
+  padding: 10px;
+  text-align: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 30px;
+}
+
+.cabecalho h1{
+  font-size: 30px;
+}
+
+.semana{
+  width: 100%;
+  display: flex;
+}
+
+.dia-semana{
+  width: 14.28%;
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+}
+
+.dias{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.dia{
+  width: 14.28%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  position: relative;
+  height: 150px;
+}
+
+.prev{
+  color: #b4b2b2;
+}
+
+.numeroDia{
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  font-size: 22px;
+  position: absolute;
+  top: 0;
+}
+
+.fimDeSemana{
+  color: var(--ion-color-primary);
+}
+
+.diaAtual{
+  color: var(--ion-color-quartenary);
+  font-weight: bolder;
+}
+
+.agendamentos{
+  width: 100%;
+  position: absolute;
+  top: 30px;
+  height: 120px;
+}
+
+.agendamento{
+  height: 100px;
+  padding: 10px 3px;
+  overflow-y: scroll;
+}
+
+.agendamento::-webkit-scrollbar {
+  width: 0.2em;
+}
+
+.agendamento::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.agendamento::-webkit-scrollbar-thumb {
+  background-color: var(--ion-color-tertiary);
+  border-radius: 3px;
+}
+
+.agendamentoDoDia{
+  font-size: 18px;
+}
+
+.mudarMes{
+  transition: background-color 0.3s ease; 
+}
+
+.mudarMes:hover{
+  color: #ababab;
+}
+
+.mudarMes:active{
+  color: var(--ion-color-primary);
+}
+
+.postit{
+  background: #F2C2D4;
+  width: 80%;
+  min-height: 40vh;
+  margin: 2em;
+}
+
+.titulo{
+  font-size: 25px;
+  font-weight: bolder;
+  padding: 8px;
+}
+
+ul li{
+  text-align: left;
+  font-size: 18px;
+}

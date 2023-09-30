@@ -1,0 +1,74 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary" id="main-content">
+    <a href="../agenda/">
+      <img src="../../assets/img/Logo_sem_nome.png" alt="Logo da Prudente Casa Pet" class="logo">
+    </a>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar color="primary" id="main-content">
+      <img src="../../assets/img/Logo_sem_nome.png" alt="Logo da Prudente Casa Pet" class="logo">
+      <ion-buttons slot="end">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+  
+<div id="container">
+  
+  <ion-menu side="end" contentId="main-content">
+    <ion-header>
+      <ion-toolbar color="primary">
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content color="primary" class="ion-padding">
+      <div><a href="../agenda/">Agenda</a></div>
+      <div><a href="../pet">Pets</a></div>
+      <div><a href="../tutor">Tutores</a></div>
+      <div><a href="../procedimentos">Tipos de procedimento</a></div>
+      <div><a href="../pagamento-efetuado">Pagamentos efetuados</a></div>
+      <div><a href="../pagamento-pendente">Pagamentos pendentes</a></div>
+      <div><a href="../servico">Serviços</a></div>
+    </ion-content>
+  </ion-menu>
+
+  <ion-row>
+    <ion-col size="12"><ion-title class="tituloPagina">Serviços</ion-title></ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col size="12">
+      <div class="elementos" *ngIf="verificarArray(buscarAPI('listar', 'servico', parametro))===true">
+        <div class="elemento" *ngFor="let servico of buscarAPI('listar', 'servico', parametro)">
+          <div class="primeiraLinha">
+            <p class="listagem" class="titulo">{{servico.nome}}</p>
+            <div class="botoes">
+              <ion-fab-button size="small">
+                <ion-icon name="create-outline"></ion-icon>
+              </ion-fab-button>
+            </div>
+          </div>
+          <div class="segundaLinha">
+            <ul>
+              <li><b>Valor da diária:</b> R$ {{servico.valor_diaria}}</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </ion-col>
+  </ion-row>
+
+</div>
+
+<ion-footer>
+  <ion-toolbar color="primary">
+  </ion-toolbar>
+</ion-footer>
+</ion-content>

@@ -1,0 +1,102 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary" id="main-content">
+    <img src="../../assets/img/Logo_sem_nome.png" alt="Logo da Prudente Casa Pet" class="logo">
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<ion-header collapse="condense">
+  <ion-toolbar color="primary" id="main-content">
+    <img src="../../assets/img/Logo_sem_nome.png" alt="Logo da Prudente Casa Pet" class="logo">
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<div id="container">
+
+<ion-menu side="end" contentId="main-content">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content color="primary" class="ion-padding">
+    <div><a href="../agenda/">Agenda</a></div>
+      <div><a href="../pet">Pets</a></div>
+      <div><a href="../tutor">Tutores</a></div>
+      <div><a href="../procedimentos">Tipos de procedimento</a></div>
+      <div><a href="../pagamento-efetuado">Pagamentos efetuados</a></div>
+      <div><a href="../pagamento-pendente">Pagamentos pendentes</a></div>
+      <div><a href="../servico">Serviços</a></div>
+  </ion-content>
+</ion-menu>
+
+<ion-row>
+  <ion-col size="9" id="coluna">
+    <div class="calendario">
+      <div class="cabecalho"><ion-icon name="chevron-back-sharp" class="mudarMes" (click)="mesAnterior()"></ion-icon><h1>{{meses[mes]}} - {{ano}}</h1><ion-icon name="chevron-forward-sharp" class="mudarMes" (click)="proximoMes()"></ion-icon></div>
+      <hr>
+      <div class="semana">
+          <div class="dia-semana">Dom</div>
+          <div class="dia-semana">Seg</div>
+          <div class="dia-semana">Ter</div>
+          <div class="dia-semana">Qua</div>
+          <div class="dia-semana">Qui</div>
+          <div class="dia-semana">Sex</div>
+          <div class="dia-semana">Sab</div>
+      </div>
+      <div class="dias">
+        <div class="dia prev" *ngFor="let i of generateRange(priMesAnt, antDia); let index = index">
+          <div class="numeroDia">{{i}}</div>
+          <div class="agendamentos">
+          </div>
+        </div>
+        <div class="dia" *ngFor="let i of generateRange(1, ultDia); let index = index" (click)="modalAdicionarAgendamento(gerarDataDia(ano, mes, i))">
+          <div class="numeroDia" [class.fimDeSemana]="fimDeSemana.includes(i)" [class.diaAtual]="i===diaAtual && mes===mesAtual">{{i}}</div>
+          <div class="agendamentos">
+            <div class="agendamento" *ngIf="verificarArray(agendamentosMes)">
+                <p class="agendamentoDoDia" *ngFor="let agendamento of filtrarData(i, agendamentosMes)">{{pets[agendamento.cod_pet] === undefined ? buscarNomePet(agendamento.cod_pet) : pets[agendamento.cod_pet]}} - {{agendamento.cod_servico  == 1 ? 'Day Care' : 'Hospedagem'}}</p>
+            </div>
+          </div>
+        </div>
+        <div class="dia prev" *ngFor="let i of generateRange(1, proxDias); let index = index">
+          <div class="numeroDia">{{i}}</div>
+          <div class="agendamentos">
+          </div>
+        </div>
+      </div>
+  </div>
+  </ion-col>
+  <ion-col size="3" class="ion-text-center">
+    <div class="postit">
+      <p class="titulo">{{gerarDataPostIt(this.hoje)}}</p>
+      <ul *ngIf="verificarArray(buscarAPI('listar', 'agendamento', gerarDataPostItAPI(this.hoje)))">
+        <li *ngFor="let agend of buscarAPI('listar', 'agendamento', gerarDataPostItAPI(this.hoje))">{{gerarAgendamento(agend)}}</li>
+      </ul>
+      <ul *ngIf="verificarArray(buscarAPI('listar', 'agendamento', gerarDataPostItAPI(this.hoje)))===false">
+        <li>Sem agendamentos hoje</li>
+      </ul>
+    </div>
+    <div class="postit">
+      <p class="titulo">{{gerarDataPostIt(this.amanha)}}</p>
+      <ul *ngIf="verificarArray(buscarAPI('listar', 'agendamento', gerarDataPostItAPI(this.amanha)))">
+        <li *ngFor="let agend of buscarAPI('listar', 'agendamento', gerarDataPostItAPI(this.amanha))">{{gerarAgendamento(agend)}}</li>
+      </ul>
+      <ul *ngIf="verificarArray(buscarAPI('listar', 'agendamento', gerarDataPostItAPI(this.amanha)))===false">
+        <li>Sem agendamentos amanhã</li>
+      </ul>
+    </div>
+  </ion-col>
+</ion-row>
+</div>
+
+<ion-footer>
+<ion-toolbar color="primary">
+</ion-toolbar>
+</ion-footer>
+</ion-content>
