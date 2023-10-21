@@ -1,0 +1,266 @@
+<!-- header -->
+<ion-header [translucent]="true">
+  <ion-toolbar class="header">
+    <ion-title class="ion-text-center">Receitas Polivalente</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- conteudo -->
+<ion-content class="conteudofuncoes" [fullscreen]="true">
+  <!-- tabela com as funcoes -->
+  <ion-grid [fixed]="true">
+    <ion-row class="rowfuncoes">
+      <!-- receitas -->
+      <ion-col class="ion-text-center" size="6">
+        <h2>Receita</h2>
+        <ion-row class="ion-justify-content-center">
+          <ion-button class="botaofuncoes" (click)="setOpenLR(true)">Listar Receitas</ion-button>
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
+          <ion-button class="botaofuncoes" (click)="setOpenIR(true)">Inserir Receitas</ion-button>
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
+          <ion-button class="botaofuncoes" (click)="setOpenAR(true)">Atualizar Receitas</ion-button>
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
+          <ion-button class="botaofuncoes" (click)="setOpenER(true)">Excluir Receitas</ion-button>
+        </ion-row>
+      </ion-col>
+      <!-- usuarios -->
+      <ion-col class="ion-text-center" size="6">
+        <h2>Usuario</h2>
+        <ion-row class="ion-justify-content-center">
+          <ion-button class="botaofuncoes">Listar Usuarios</ion-button>
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
+          <ion-button class="botaofuncoes">Inserir Usuarios</ion-button>
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
+          <ion-button class="botaofuncoes">Atualizar Usuarios</ion-button>
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
+          <ion-button class="botaofuncoes">Excluir Usuarios</ion-button>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+
+<!-- modal listar receitas -->
+<ion-modal [isOpen]="isModalOpenLR">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Lista de Receitas</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="setOpenLR(false)">Fechar</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding ion-text-center ion-align-items-center">
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <h3>Receitas</h3>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="ion-align-items-center">
+            <ion-button class="botaofuncoes" (click)="fecharModalENavegar()">Sem Lactose</ion-button>
+
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="ion-align-items-center">
+            <ion-button class="botaofuncoes">Sem Gluten</ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="ion-align-items-center">
+            <ion-button class="botaofuncoes">Low Carb</ion-button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="ion-align-items-center">
+            <ion-button class="botaofuncoes">Sem açúcar</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+
+<!-- modal Inserir Receitas -->
+<ion-modal [isOpen]="isModalOpenIR">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Inserir Receita</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="setOpenIR(false)">Fechar</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <h3 class="ion-text-center">Inserir Receitas</h3>
+          </ion-col>
+        </ion-row>
+
+       <ion-row>
+        <ion-col>
+          <ion-input label="Nome da receita" [(ngModel)]="this.receita.nome" label-placement="floating" fill="outline" placeholder=""></ion-input>
+        </ion-col>
+       </ion-row>
+       
+       <ion-row>
+        <ion-col>
+          <ion-input label="Descrição" [(ngModel)]="this.receita.descricao" label-placement="floating" fill="outline" placeholder=""></ion-input>
+        </ion-col>
+       </ion-row>
+
+       <ion-row>
+        <ion-col size="12">
+          <ion-input label="Ingredientes" [(ngModel)]="this.ingrediente.descricao" label-placement="floating" fill="outline" placeholder=""></ion-input>
+          <ion-button (click)="adcionarIngrediente()">Adcionar Ingrediente</ion-button>
+        </ion-col>
+          <ng-container *ngFor="let ingrediente of this.receita.ingredientes; let index as i">
+            <ion-col size="12">
+              <ion-list>
+                <ion-item>
+                  <ion-label>{{ingrediente.descricao}}</ion-label>     
+                  <ion-button (click)="removerIngredientes(index)">r</ion-button>             
+                </ion-item>
+              </ion-list>
+            </ion-col>
+          </ng-container>
+       </ion-row>
+
+       <ion-row>
+        <ion-col size="12">
+          <ion-input label="Modo de Preparo" [(ngModel)]="this.modopreparo.descricao" label-placement="floating" fill="outline" placeholder=""></ion-input>
+          <ion-button (click)="adcionarModoPreparo()">Adcionar Modo de Preparo</ion-button>
+        </ion-col>
+          <ng-container *ngFor="let modopreparo of this.receita.modo_preparo; let index as i">
+            <ion-col size="12">
+              <ion-list>
+                <ion-item>
+                  <ion-label>{{modopreparo.descricao}}</ion-label>
+                  <ion-button (click)="removerModoPreparo(index)">r</ion-button>
+                </ion-item>
+              </ion-list>
+            </ion-col>
+          </ng-container>
+       </ion-row>
+
+       <ion-row>
+        <ion-col>
+          <ion-list>
+            <ion-item>
+              <ion-select aria-label="Fruit" placeholder="Selecione o tipo da Receita" [multiple]="true">
+                <ion-select-option value="sLactose">Sem Lactose</ion-select-option>
+                <ion-select-option value="sGluten">Sem Gluten</ion-select-option>
+                <ion-select-option value="lCarb">Low Carb</ion-select-option>
+                <ion-select-option value="sAcucar">Sem Açucar</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+       </ion-row>
+
+       <ion-row>
+        <ion-col>
+          <ion-list>
+            <ion-item>
+              <ion-select aria-label="Fruit" placeholder="Selecione a especificação da receita" [multiple]="true">
+                <ion-select-option value="entrada">Entrada</ion-select-option>
+                <ion-select-option value="pPrincipal">Prato Principal</ion-select-option>
+                <ion-select-option value="petisco">Petisco</ion-select-option>
+                <ion-select-option value="bebida">Bebida</ion-select-option>
+                <ion-select-option value="sobremesa">Sobremesa</ion-select-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+       </ion-row>
+
+       <ion-row>
+        <ion-col>
+          <ion-button id="botaoAlertLR" color="tertiary" (click)="exibirAlertaLR()">Inserir Receita</ion-button>
+        </ion-col>
+       </ion-row>
+      </ion-grid>
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<!-- alert inserir receitas -->
+<ion-alert
+  trigger="botaoAlertLR"
+  header="Deseja inserir essa receita?"
+  [buttons]="alertBotaoLR"
+></ion-alert>
+
+
+<!-- modal Atualizar Receitas -->
+<ion-modal [isOpen]="isModalOpenAR">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Modal</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="setOpenAR(false)">Fechar</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+     
+      <ion-row>
+        <ion-col>
+          <ion-input label="Nome da receita" label-placement="floating" fill="outline" placeholder=""></ion-input>
+        </ion-col>
+       </ion-row>
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<!-- modal Excluir Receitas -->
+<ion-modal [isOpen]="isModalOpenER">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Modal</ion-title>
+        <ion-buttons slot="end">
+          <ion-button (click)="setOpenER(false)">Fechar</ion-button>
+        </ion-buttons>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">
+      <p>
+        I know that we are young
+        And I know that you may love me
+        But I just can't be with you like this anymore
+        Alejandro
+        She's got both hands
+        In her pocket
+        And she won't look at you
+        Won't look at you
+        She hides true love
+        En su bolsillo
+        She got a halo around her finger
+        Around you
+      </p>
+    </ion-content>
+  </ng-template>
+</ion-modal>
+
+<!-- footer -->
+<ion-footer>
+  <ion-toolbar class="footer">
+    <ion-title class="ion-text-center"> Receitas Polivalente</ion-title>
+  </ion-toolbar>
+</ion-footer>

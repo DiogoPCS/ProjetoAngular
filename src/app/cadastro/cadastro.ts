@@ -3,12 +3,12 @@ import { RouterLink } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: 'app.component.html',
-  styleUrls: ['app.component.scss'],
+  selector: 'app-cadastro',
+  templateUrl: 'cadastro.html',
+  styleUrls: ['cadastro.scss'],
   standalone: true,
-  imports: [IonicModule, RouterLink],
+  imports: [IonicModule,RouterLink],
 })
-export class AppComponent {
+export class CadastroPage {
   constructor() {}
 }

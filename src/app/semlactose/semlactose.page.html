@@ -1,0 +1,154 @@
+<ion-content [fullscreen]="true">
+
+  <ion-row class="ion-justify-content-center">
+    <ion-col size="6">
+      <ion-list>
+        <ion-item lines="none">
+          <ion-col>
+            <h3>Receitas sem Lactose</h3>
+          </ion-col>
+          <ion-col>
+            <ion-button #homeButton routerLink="../innertable">Home</ion-button>
+          </ion-col>
+          <ion-col>
+            <ion-searchbar placeholder="Pesquisar" class="pesquisa">
+            </ion-searchbar>
+          </ion-col>
+
+
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Receita 1</ion-label>
+          <ion-button (click)="setOpenSL(true)">Abrir Descrição</ion-button>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Receita 2</ion-label>
+          <ion-button>Abrir Descrição</ion-button>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Receita 3</ion-label>
+          <ion-button>Abrir Descrição</ion-button>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Receita 4</ion-label>
+          <ion-button>Abrir Descrição</ion-button>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Receita 5</ion-label>
+          <ion-button>Abrir Descrição</ion-button>
+        </ion-item>
+
+      </ion-list>
+    </ion-col>
+  </ion-row>
+
+
+  <!-- Modal Receita SL -->
+  <ion-modal [isOpen]="isModalOpenSL" class="modal-fullscreen">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Lista de Receitas</ion-title>
+          <ion-buttons slot="end">
+            <ion-button (click)="setOpenSL(false)">Fechar</ion-button>
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding ion-text-center ion-align-items-center">
+        <ion-grid>
+          <ion-row>
+            <ion-col id="colunaReceita" class="ion-justify-content-center" size="10">
+              <h2 class="ion-text-center ion-align-items-center">Bolo de Chocolate</h2>
+            </ion-col>
+            <ion-col>
+              <ion-button>ED</ion-button>
+              <ion-button>EX</ion-button>
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col size="10" class="ion-align-items-center">
+              <img class="imagemSL"
+                 src="https://images.pexels.com/photos/1196516/pexels-photo-1196516.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"> 
+            </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col class="ion-text-center" size="10">
+              <h3 class="ion-text-center ion-align-items-center">Ingredientes</h3>
+
+              <ion-row>
+                <ion-col>
+                  <ion-list>
+                    <ion-item class="ingredientes">
+                        1 XICARA DE AMOR
+                    </ion-item>
+                    <ion-item>
+                      1 XICARA DE AMIZADE
+                    </ion-item>
+                    <ion-item>
+                      1 XICARA DE AMOR
+                    </ion-item>
+                    <ion-item>
+                      1 XICARA DE AMOR
+                    </ion-item>
+                    <ion-item>
+                      1 XICARA DE AMOR
+                    </ion-item>
+                  </ion-list>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+          </ion-row>
+
+
+          <ion-row>
+            <ion-col size="10">
+              <h3 class="ion-text-center ion-align-items-center">Modo de Preparo</h3>
+
+              <ion-row>
+                <ion-col class="ion-text-center  ion-align-items-center">
+                  <ion-list>
+                    <ion-item>
+                      Coloque amor
+                    </ion-item>
+                    <img class="imagemSL"
+                      src="https://images.pexels.com/photos/1196516/pexels-photo-1196516.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                    <ion-item>
+                      Coloque amor
+                    </ion-item>
+                    <img class="imagemSL"
+                      src="https://images.pexels.com/photos/1196516/pexels-photo-1196516.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                    <ion-item>
+                      Coloque amor
+                    </ion-item>
+                    <img class="imagemSL"
+                      src="https://images.pexels.com/photos/1196516/pexels-photo-1196516.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                    <ion-item>
+                      Coloque amor
+                    </ion-item>
+                    <img class="imagemSL"
+                      src="https://images.pexels.com/photos/1196516/pexels-photo-1196516.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                    <ion-item>
+                      Coloque amor
+                    </ion-item>
+                    <img class="imagemSL"
+                      src="https://images.pexels.com/photos/1196516/pexels-photo-1196516.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+                  </ion-list>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+          </ion-row>
+
+
+        </ion-grid>
+      </ion-content>
+    </ng-template>
+  </ion-modal>
+
+</ion-content>

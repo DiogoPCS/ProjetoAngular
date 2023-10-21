@@ -1,22 +1,277 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+   <ion-row class="ion-justify-content-center" id="banner">
+     <ion-col size="12" size-md="12" size-lg="12" class="ion-text-center full-height">
+      <ion-header collapse="fade">
 
-  <div id="container">
-    <h3>Projeto com Bootstrap e Ionic!</h3>
-    <hr>
-    <p>Componentes Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components"> - UI Components</a></p>
-    <p>Componentes Bootstrap <a target="_blank" rel="noopener noreferrer" href="https://getbootstrap.com/docs/5.3/components/buttons/"> - UI Components</a></p>
-  </div>
+         <!-- HEADER -->
+         <ion-row class="align-items-center">
+          <ion-col>
+            <img srcset="../../assets/polivalente.png" width="70px" height="70px" id="logo" routerLink="/home">
+            <h1 id="titulo">Polivalente</h1>
+            </ion-col>
+          <ion-col>
+            <ion-searchbar class="custom"
+                show-cancel-button="never"
+                animated="true"
+                placeholder="Pesquisar..."
+                class="custom"
+            ></ion-searchbar>
+          </ion-col>
+          <ion-col>
+            <a>
+            <ion-icon name="person-circle-outline" id="perfil" routerLink="/login"></ion-icon>
+          </a>
+          </ion-col>
+        </ion-row>
+      </ion-header>
+
+
+
+      <!-- OPÇOES -->
+
+      <ion-row class="align-items-center" id="segundoheader">
+        <ion-content id="tres-tracinho">
+        <ion-buttons slot="start">
+          <ion-menu-button auto-hide="false" menu="main-menu"></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Menu Button</ion-title>
+      </ion-content>
+        <ion-col>
+          <ion-button routerLink="/semgluten">
+           <h2>Sem Gluten</h2>
+           <img src="../assets/gluten.png" id="gluten">
+         </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button routerLink="/semlactose">
+           <h2>Sem Lactose</h2>
+           <img src="../assets/lactose.png" id="lactose">
+         </ion-button>
+       
+        </ion-col>
+        <ion-col>
+          <ion-button routerLink="/semacucar">
+           <h2>Sem Açúcar</h2>
+           <img src="../assets/açucar.png" id="acucar">
+         </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button routerLink="/lowcarb">
+           <h2>Low Carb</h2>
+           <img src="../assets/carboidrato.png" id="carboidrato">
+         </ion-button>
+        </ion-col>
+      </ion-row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <!-- DIVIDER -->
+                <!-- <ion-row class="align-items-center" id="espacamento">
+                  <ion-col></ion-col>
+                  <ion-col size="3" id="divider"></ion-col>
+                  <ion-col size="3" id="destaques">Destaques da semana</ion-col>
+                  <ion-col size="3" id="divider"></ion-col>
+                  <ion-col></ion-col>
+                </ion-row> -->
+<!-- ////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+                <!-- CARD -->
+                        <!-- <ion-row class="ion-align-items-center ion-justify-content-center" id="caro"> -->
+
+                          
+                          <!-- <ion-col size="2"> </ion-col>
+                                    <ion-col size="8" >
+                                <div class="wrapper">
+                                  <i id="left" class="fa-solid fa-angle-left"></i> 
+                                    <div class="carousel">
+                                        <img src="https://images.pexels.com/photos/14130600/pexels-photo-14130600.jpeg" alt="img" draggable="false">
+                                        <img src="https://images.pexels.com/photos/14130600/pexels-photo-14130600.jpeg" alt="img" draggable="false">
+                                        <img src="https://images.pexels.com/photos/14130600/pexels-photo-14130600.jpeg" alt="img" draggable="false">
+                                        <img src="https://images.pexels.com/photos/14130600/pexels-photo-14130600.jpeg" alt="img" draggable="false">
+                                        <img src="https://images.pexels.com/photos/14130600/pexels-photo-14130600.jpeg" alt="img" draggable="false">
+                                        <img src="https://images.pexels.com/photos/14130600/pexels-photo-14130600.jpeg" alt="img" draggable="false">
+                                        <img src="https://images.pexels.com/photos/14130600/pexels-photo-14130600.jpeg" alt="img" draggable="false">
+                                        <img src="https://images.pexels.com/photos/14130600/pexels-photo-14130600.jpeg" alt="img" draggable="false">
+                                        <img src="https://images.pexels.com/photos/14130600/pexels-photo-14130600.jpeg" alt="img" draggable="false">
+                                        <img src="https://images.pexels.com/photos/14130600/pexels-photo-14130600.jpeg" alt="img" draggable="false">
+
+                                        
+                                    </div>
+                                    <i id="right" class="fa-solid fa-angle-right"></i> 
+                                </div>
+                                  </ion-col>
+                         <ion-col size="2"> </ion-col> -->
+                      <!-- </ion-row> -->
+    
+
+
+ 
+
+
+                <!-- DIVIDER -->
+                <ion-row class="align-items-center" id="espacamento">
+                  <ion-col></ion-col>
+                  <ion-col size="3"id="divider"></ion-col>
+                  <ion-col size="3"id="destaques">Receitas</ion-col>
+                  <ion-col size="3"id="divider"></ion-col>
+                  <ion-col></ion-col>
+                </ion-row>
+ 
+
+
+                <!--  RECEITAS -->
+
+                  <ion-row ion-justify-content-center ion-align-items-center>
+                    <ion-col size="2"></ion-col>
+                    <ion-col size="6">
+                <div class="imagens">
+
+                  <ng-container *ngFor="let receita of this.receitas">
+                    <img src="{{receita.src }}" (click)="setOpen(true, receita)" expand="block" class="imgrec">
+                  </ng-container>
+
+                  <ion-modal [isOpen]="isModalOpen" (willDismiss)="onWillDismiss($event)">
+                    <ng-template>                         
+                          <ion-item button="true" detail="false" (click)="setOpen(false, null)" class="cardzin" lines="none" routerLink="/receita">
+                          <img src="{{this.receita_selecionada.src}}" class="imgrec">
+                          <ion-col size="7">
+                            <h5 class="nomerec">{{this.receita_selecionada.nomerec}}</h5>
+                            <h4>{{this.receita_selecionada.descricao}}</h4>
+                          </ion-col>
+                          <ion-col size="2" class="colcard">
+                            <div class="restri"> 
+                            <ng-container *ngFor="let botao of this.receita_selecionada.restricoes">
+                              <img src="{{ botao }}" class="iconsrestr">
+                            </ng-container>
+                            </div>
+                          </ion-col>
+                          </ion-item>
+                    </ng-template>
+                  </ion-modal>
+
+  
+  
+               
+                </div>
+              </ion-col>
+                    <!-- FILTRAGEM -->
+                    <ion-col>
+                    <div class="box">
+                      <h1 id="letreiro">Tipo</h1>
+                      <div class="boxxie">
+                       
+                        <ion-checkbox labelPlacement="end">Entrada</ion-checkbox>
+                        <br/>
+                        <ion-checkbox labelPlacement="end">Prato principal</ion-checkbox>
+                        <br/>
+                        <ion-checkbox labelPlacement="end">Pestisco</ion-checkbox>
+                        <br/>
+                        <ion-checkbox labelPlacement="end">Bebida</ion-checkbox>
+                        <br/>
+                        <ion-checkbox labelPlacement="end">Sobremesa</ion-checkbox>
+                        <br/>
+                      
+                      </div>
+                    </div>
+                  </ion-col>
+                  <ion-col></ion-col>
+                    </ion-row>
+
+
+                  <!-- DIVIDER -->
+                <ion-row class="align-items-center" id="espacamento">
+                  <ion-col></ion-col>
+                      <ion-col size="2"id="divider"></ion-col>
+                              <ion-col size="2" class="ion-align-items-center ion-justify-content-center" id="pag">
+                                <ion-icon name="chevron-back-outline" id="esquerda"></ion-icon>
+                                      <h5 id="paginacao">1</h5>
+                                      <h5 id="paginacao">2</h5>
+                                      <h5 id="paginacao">3</h5>
+                                      <h5 id="paginacao">4</h5>
+                                      <h5 id="paginacao">5</h5>
+                                <ion-icon name="chevron-forward-outline" id="direita"></ion-icon>
+                              </ion-col>
+                      <ion-col size="5"id="divider"></ion-col>
+                  <ion-col></ion-col>
+                </ion-row>
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+                            <!-- FOOTER -->
+                            <ion-row class="ion-justify-content-center" id="subbanner">
+
+
+                                        <ion-col size="4" id="colunasfooter">
+                                        <ion-title id="redesfooter">Redes Sociais</ion-title>
+                                        <ion-icon name="logo-tiktok" id="iconesredes"></ion-icon> 
+                                        <ion-icon name="logo-instagram" id="iconesredes"></ion-icon>
+                                        </ion-col> 
+
+
+
+                                         <ion-col size="4" id="colunasfooter">
+                                        <ion-title id="titulofooter">Polivalente</ion-title>
+                                        <img src="../../assets/polivalente.png" width="70px" height="70px" id="logofooter">
+                                        </ion-col>
+
+
+
+                                        <ion-col size="4" id="colunasfooter">
+                                        <ion-title id="titulofooter">Envie-nos sua receita!</ion-title>
+                                        <ion-icon name="mail-outline" id="iconesredes"></ion-icon>
+                                        </ion-col> 
+
+                          
+                            
+                                      </ion-row>
+            
+               
+
+       </ion-col>
+         </ion-row>
 </ion-content>

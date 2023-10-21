@@ -1,0 +1,380 @@
+<ion-content [fullscreen]="true">
+  <ion-row class="ion-justify-content-center" id="banner">
+    <ion-col size="12" size-mg="12" size-lg="12" class="ion-text-center full-height">
+     <ion-header collapse="fade">
+
+        <!-- HEADER -->
+        <ion-row class="align-items-center">
+         <ion-col>
+           <img srcset="../assets/polivalente.png" width="70px" height="70px" id="logo">
+           <h1 id="titulo">Polivalente</h1>
+           </ion-col>
+         <ion-col>
+           <ion-searchbar class="custom"
+               show-cancel-button="never"
+               animated="true"
+               placeholder="Pesquisar..."
+               class="custom"
+           ></ion-searchbar>
+         </ion-col>
+         <ion-col>
+           <a>
+           <ion-icon name="person-circle-outline" id="perfil" routerLink="/login"></ion-icon>
+         </a>
+         </ion-col>
+       </ion-row>
+     </ion-header>
+
+
+     <!-- OPÇOES -->
+
+     <ion-row class="align-items-center" id="segundoheader">
+       <ion-col>
+         <ion-button>
+          <h2>Sem Gluten</h2>
+          <img src="../assets/gluten.png">
+        </ion-button>
+       </ion-col>
+       <ion-col>
+         <ion-button>
+          <h2>Sem Lactose</h2>
+          <img src="../assets/lactose.png">
+        </ion-button>
+      
+       </ion-col>
+       <ion-col>
+         <ion-button>
+          <h2>Sem Açúcar</h2>
+          <img src="../assets/açucar.png">
+        </ion-button>
+       </ion-col>
+       <ion-col>
+         <ion-button>
+          <h2>Low Carb</h2>
+          <img src="../assets/carboidrato.png">
+        </ion-button>
+
+       </ion-col>
+     </ion-row>
+     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+          <ion-row id="container">
+
+
+     <ion-col size="6">
+  
+        <img src="https://images.pexels.com/photos/8391387/pexels-photo-8391387.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" id="fotoperfil">
+   
+        <h1 id="nome">Eric Fã do Harry</h1> <!-- <h1>{{ usuarioLogado.nome }}</h1> -->
+  
+     </ion-col>
+
+<!-- /////////////////////////// COL CENTRAL ONDE FICAM OS ICONES  ////////////////////////////////////////////////////////////////////////////////// -->
+            <ion-col size="1">
+              <ion-row class="ion-align-items-center ion-justify-content-center" id="separacurt" (click)="handleCurtirClick()">
+                <ion-icon name="heart-outline" id="curti"></ion-icon>
+              </ion-row>
+              <ion-row class="ion-align-items-center ion-justify-content-center" id="separafavo" (click)="handleFavoritoClick()">
+                <ion-icon name="star-outline" id="favos"></ion-icon>
+              </ion-row>
+            </ion-col>
+    
+<!-- /////////////////////////// COL PARA CURTIDAS  ////////////////////////////////////////////////////////////////////////////////// -->
+
+    <ion-col size="5" *ngIf="this.selected=='curti'" id="espacoreceitascurti">
+      <ion-content id="contentcurti">
+        <ion-list id="contentcurti">
+          <div id="imgholdercurti" lines="none">
+            <ion-col>
+            <img src="https://images.pexels.com/photos/18437691/pexels-photo-18437691/free-photo-of-jantar-janta-fotografia-de-alimentos-fotografia-de-comida.jpeg?auto=compress&cs=tinysrgb&w=1600" id="imagensrec">
+          </ion-col>
+          <ion-row id="nomeavarestri">
+            <ion-col size="8" id="nomeava">
+              <h1 id="nome">NOME DA RECEITA NOME</h1>
+              <P></P>
+              <h2 id="avaliacao" class="positiva">AVALIAÇAO 76% <ion-icon name="thumbs-up-outline"></ion-icon></h2>
+             
+            </ion-col>
+            <ion-col>
+              <div id="restri">
+              <img src="../assets/gluten.png" id="gluten" class="iconsrestr">
+              <!-- <img src="../assets/lactose.png" id="lactose" class="iconsrestr">
+              <img src="../assets/açucar.png" id="acucar" class="iconsrestr"> -->
+              <img src="../assets/carboidrato.png" id="carboidrato" class="iconsrestr">
+              </div>
+            </ion-col>
+          </ion-row>
+        </div>
+      
+          <div id="imgholdercurti" lines="none">
+            <ion-col>
+            <img src="https://images.pexels.com/photos/699953/pexels-photo-699953.jpeg?auto=compress&cs=tinysrgb&w=1600" id="imagensrec">
+          </ion-col>
+          <ion-row id="nomeavarestri">
+            <ion-col size="8" id="nomeava">
+              <h1 id="nome">NOME DA RECEITA NOME</h1>
+              <P></P>
+              <h2 id="avaliacao">AVALIAÇAO 45%</h2>
+             
+            </ion-col>
+            <ion-col>
+              <div id="restri">
+              <img src="../assets/gluten.png" id="gluten" class="iconsrestr">
+              <img src="../assets/lactose.png" id="lactose" class="iconsrestr">
+              <img src="../assets/açucar.png" id="acucar" class="iconsrestr">
+              <img src="../assets/carboidrato.png" id="carboidrato" class="iconsrestr">
+              </div>
+            </ion-col>
+          </ion-row>
+        </div>
+        </ion-list>
+      </ion-content>
+    </ion-col>
+            
+
+
+
+
+    <!-- /////////////////////////// COL PARA FAVORITADOS  ////////////////////////////////////////////////////////////////////////////////// -->
+
+
+     <ion-col size="5" *ngIf="this.selected=='favos'" id="espacoreceitasfavos">
+      <ion-content id="conteudo">
+        <ion-list id="listinha">
+        <div id="imgholder" lines="none">
+       
+          <ion-col>
+          <img src="https://images.pexels.com/photos/1425174/pexels-photo-1425174.jpeg?auto=compress&cs=tinysrgb&w=1600" id="imagensrec">
+        </ion-col>
+        <ion-row id="nomeavarestri">
+        <ion-col size="8" id="nomeava">
+          <h1 id="nome">NOME DA RECEITA NOME</h1>
+          <P></P>
+          <h2 id="avaliacao" class="positiva">AVALIAÇAO 99% <ion-icon name="thumbs-up-outline"></ion-icon></h2>
+         
+        </ion-col>
+        <ion-col>
+          <div id="restri">
+          <img src="../assets/gluten.png" id="gluten" class="iconsrestr">
+          <img src="../assets/lactose.png" id="lactose" class="iconsrestr">
+          <!-- <img src="../assets/açucar.png" id="acucar" class="iconsrestr"> -->
+          <img src="../assets/carboidrato.png" id="carboidrato" class="iconsrestr">
+          </div>
+        </ion-col>
+      </ion-row>
+      </div>
+
+        <div id="imgholder" lines="none">
+          <ion-col>
+          <img src="https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=1600" id="imagensrec">
+        </ion-col>
+        <ion-row id="nomeavarestri">
+          <ion-col size="8" id="nomeava">
+            <h1 id="nome">NOME DA RECEITA NOME</h1>
+            <P></P>
+            <h2 id="avaliacao" class="negativa">AVALIAÇAO 50% <ion-icon name="thumbs-down-outline"></ion-icon></h2>
+           
+          </ion-col>
+          <ion-col>
+            <div id="restri">
+            <img src="../assets/gluten.png" id="gluten" class="iconsrestr">
+            <!-- <img src="../assets/lactose.png" id="lactose" class="iconsrestr">
+            <img src="../assets/açucar.png" id="acucar" class="iconsrestr">
+            <img src="../assets/carboidrato.png" id="carboidrato" class="iconsrestr"> -->
+            </div>
+          </ion-col>
+        </ion-row>
+      </div>
+    
+        <div id="imgholder" lines="none">
+          <ion-col>
+          <img src="https://images.pexels.com/photos/699953/pexels-photo-699953.jpeg?auto=compress&cs=tinysrgb&w=1600" id="imagensrec">
+        </ion-col>
+        <ion-row id="nomeavarestri">
+          <ion-col size="8" id="nomeava">
+            <h1 id="nome">NOME DA RECEITA NOME</h1>
+            <P></P>
+            <h2 id="avaliacao" class="negativa">AVALIAÇAO 45% <ion-icon name="thumbs-down-outline"></ion-icon></h2>
+           
+          </ion-col>
+          <ion-col>
+            <div id="restri">
+            <!-- <img src="../assets/gluten.png" id="gluten" class="iconsrestr">
+            <img src="../assets/lactose.png" id="lactose" class="iconsrestr"> -->
+            <img src="../assets/açucar.png" id="acucar" class="iconsrestr">
+            <img src="../assets/carboidrato.png" id="carboidrato" class="iconsrestr">
+            </div>
+          </ion-col>
+        </ion-row>
+      </div>
+
+      <div id="imgholder" lines="none">
+        <ion-col>
+        <img src="https://images.pexels.com/photos/18437691/pexels-photo-18437691/free-photo-of-jantar-janta-fotografia-de-alimentos-fotografia-de-comida.jpeg?auto=compress&cs=tinysrgb&w=1600" id="imagensrec">
+      </ion-col>
+      <ion-row id="nomeavarestri">
+        <ion-col size="8" id="nomeava">
+          <h1 id="nome">NOME DA RECEITA NOME</h1>
+          <P></P>
+          <h2 id="avaliacao" class="positiva">AVALIAÇAO 76% <ion-icon name="thumbs-up-outline"></ion-icon></h2>
+         
+        </ion-col>
+        <ion-col>
+          <div id="restri">
+          <img src="../assets/gluten.png" id="gluten" class="iconsrestr">
+          <!-- <img src="../assets/lactose.png" id="lactose" class="iconsrestr">
+          <img src="../assets/açucar.png" id="acucar" class="iconsrestr"> -->
+          <img src="../assets/carboidrato.png" id="carboidrato" class="iconsrestr">
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+  
+      <div id="imgholder" lines="none">
+        <ion-col>
+        <img src="https://images.pexels.com/photos/699953/pexels-photo-699953.jpeg?auto=compress&cs=tinysrgb&w=1600" id="imagensrec">
+      </ion-col>
+      <ion-row id="nomeavarestri">
+        <ion-col size="8" id="nomeava">
+          <h1 id="nome">NOME DA RECEITA NOME</h1>
+          <P></P>
+          <h2 id="avaliacao">AVALIAÇAO 45%</h2>
+         
+        </ion-col>
+        <ion-col>
+          <div id="restri">
+          <img src="../assets/gluten.png" id="gluten" class="iconsrestr">
+          <img src="../assets/lactose.png" id="lactose" class="iconsrestr">
+          <img src="../assets/açucar.png" id="acucar" class="iconsrestr">
+          <img src="../assets/carboidrato.png" id="carboidrato" class="iconsrestr">
+          </div>
+        </ion-col>
+      </ion-row>
+    </div>
+
+    <div id="imgholder" lines="none">
+      <ion-col>
+      <img src="https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=1600" id="imagensrec">
+    </ion-col>
+    <ion-row id="nomeavarestri">
+      <ion-col size="8" id="nomeava">
+        <h1 id="nome">NOME DA RECEITA NOME</h1>
+        <P></P>
+        <h2 id="avaliacao">AVALIAÇAO 45%</h2>
+       
+      </ion-col>
+      <ion-col>
+        <div id="restri">
+        <img src="../assets/gluten.png" id="gluten" class="iconsrestr">
+        <img src="../assets/lactose.png" id="lactose" class="iconsrestr">
+        <img src="../assets/açucar.png" id="acucar" class="iconsrestr">
+        <img src="../assets/carboidrato.png" id="carboidrato" class="iconsrestr">
+        </div>
+      </ion-col>
+    </ion-row>
+  </div>
+
+    <div id="imgholder" lines="none">
+      <ion-col>
+      <img src="https://images.pexels.com/photos/699953/pexels-photo-699953.jpeg?auto=compress&cs=tinysrgb&w=1600" id="imagensrec">
+    </ion-col>
+    <ion-row id="nomeavarestri">
+      <ion-col size="8" id="nomeava">
+        <h1 id="nome">NOME DA RECEITA NOME</h1>
+        <P></P>
+        <h2 id="avaliacao">AVALIAÇAO 45%</h2>
+       
+      </ion-col>
+      <ion-col>
+        <div id="restri">
+        <img src="../assets/gluten.png" id="gluten" class="iconsrestr">
+        <img src="../assets/lactose.png" id="lactose" class="iconsrestr">
+        <img src="../assets/açucar.png" id="acucar" class="iconsrestr">
+        <img src="../assets/carboidrato.png" id="carboidrato" class="iconsrestr">
+        </div>
+      </ion-col>
+    </ion-row>
+  </div>
+
+
+      
+       </ion-list>
+      </ion-content>
+     </ion-col>
+   
+
+          </ion-row>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   <!-- FOOTER -->
+   <ion-row class="ion-justify-content-center" id="subbanner">
+
+
+    <ion-col size="4" id="colunasfooter">
+    <ion-title id="redesfooter">Redes Sociais</ion-title>
+    <ion-icon name="logo-tiktok" id="iconesredes"></ion-icon> 
+    <ion-icon name="logo-instagram" id="iconesredes"></ion-icon>
+    </ion-col> 
+
+
+
+     <ion-col size="4" id="colunasfooter">
+    <ion-title id="titulofooter">Polivalente</ion-title>
+    <img src="assets/polivalente.png" width="70px" height="70px" id="logofooter">
+    </ion-col>
+
+
+
+    <ion-col size="4" id="colunasfooter">
+    <ion-title id="titulofooter">Envie-nos sua receita!</ion-title>
+    <ion-icon name="mail-outline" id="iconesredes"></ion-icon>
+    </ion-col> 
+
+
+
+</ion-row>
+
+
+
+</ion-col>
+</ion-row>
+
+
+
