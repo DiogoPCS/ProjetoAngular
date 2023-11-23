@@ -1,0 +1,268 @@
+<ion-content [fullscreen]="true">
+  <ion-row class="ion-justify-content-center" id="banner">
+    <ion-col size="12" size-md="12" size-lg="12" class="ion-text-center full-height">
+     <ion-header collapse="fade">
+
+        <!-- HEADER -->
+        <ion-row class="align-items-center">
+         <ion-col>
+           <img srcset="../../assets/polivalente.png" width="70px" height="70px" id="logo" routerLink="/home">
+           <h1 id="titulo">Polivalente</h1>
+           </ion-col>
+         <ion-col>
+           <ion-searchbar class="custom"
+               show-cancel-button="never"
+               animated="true"
+               placeholder="Pesquisar..."
+               class="custom"
+           ></ion-searchbar>
+         </ion-col>
+         <ion-col>
+           <a>
+           <ion-icon name="person-circle-outline" id="perfil" routerLink="/login"></ion-icon>
+         </a>
+         </ion-col>
+       </ion-row>
+     </ion-header>
+
+
+
+     <!-- OPÇOES -->
+
+     <ion-row class="align-items-center" id="segundoheader">
+
+       <ion-col>
+         <ion-button routerLink="/semgluten">
+          <h2>Sem Gluten</h2>
+          <img src="../assets/gluten.png" id="gluten">
+        </ion-button>
+       </ion-col>
+       <ion-col>
+         <ion-button routerLink="/semlactose">
+          <h2>Sem Lactose</h2>
+          <img src="../assets/lactose.png" id="lactose">
+        </ion-button>
+      
+       </ion-col>
+       <ion-col>
+         <ion-button routerLink="/semacucar">
+          <h2>Sem Açúcar</h2>
+          <img src="../assets/açucar.png" id="acucar">
+        </ion-button>
+       </ion-col>
+       <ion-col>
+         <ion-button routerLink="/lowcarb">
+          <h2>Low Carb</h2>
+          <img src="../assets/carboidrato.png" id="carboidrato">
+        </ion-button>
+       </ion-col>
+     </ion-row>
+
+    
+ <!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+ 
+       <!-- DIVIDER -->
+        <ion-row>
+       <ion-col size="9">
+ <ion-row class="align-items-left" id="espacamento">
+  <ion-col size="1"></ion-col>
+  <ion-col size="3" id="divider"></ion-col>
+  <ion-col size="4" id="nomerec">BOLO DE MILHO GLÚTEN</ion-col>
+  <ion-col size="3" id="divider"></ion-col>
+  <ion-col size="1"></ion-col>
+ </ion-row>
+
+ <!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+ <!--IMAGEM RECEITA-->
+
+ <ion-row class="align-items-center" id="espacoimagem">
+  <ion-col size="3"></ion-col>
+  <ion-col size="6"> 
+  <img src="../../assets/bolomilho.jpg" id="fotorec">
+  </ion-col>
+  <ion-col size="3"></ion-col>
+ </ion-row>
+
+
+ <!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+ 
+       <!-- DIVIDER -->
+
+       <ion-row class="align-items-center" id="espacamento">
+        <ion-col size="1"></ion-col>
+        <ion-col size="3" id="divider"></ion-col>
+        <ion-col size="4" id="nomerec">Ingredientes</ion-col>
+        <ion-col size="3" id="divider"></ion-col>
+        <ion-col size="1"></ion-col>
+      </ion-row>
+      
+ <!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+       <!--INGREDIENTES-->
+       <ion-row>
+        <ion-col size="3"></ion-col>
+        <ion-col size="6">
+          <ion-item id="ingredientebox" lines="none">
+            <ion-list lines="none">
+
+              <p>1 lata de milho</p>
+              <p>2 ovos</p>
+              <p>½ xícara de leite</p>
+              <p>½ xicara de óleo</p>
+              <p>1 xícara de açúcar</p>
+              <p>6 colheres de sopa de fubá sem glúten</p>
+              <p>1 colher de fermento em pó químico sem glúten</p>
+
+              
+            </ion-list>
+          </ion-item>
+        </ion-col>
+        <ion-col size="3"></ion-col>
+       </ion-row>
+
+
+        <!-- DIVIDER -->
+
+        <ion-row class="align-items-center" id="espacamento">
+          <ion-col size="1"></ion-col>
+          <ion-col size="3" id="divider"></ion-col>
+          <ion-col size="4" id="nomerec">Modo de Preparo</ion-col>
+          <ion-col size="3" id="divider"></ion-col>
+          <ion-col size="1"></ion-col>
+        </ion-row>
+
+           <!--MODO DE PREPARO-->
+           <ion-row>
+            <ion-col size="3"></ion-col>
+            <ion-col size="6">
+              <ion-item id="ingredientebox" lines="none">
+                <ion-list lines="none">
+                  <p>1 pré aqueça seu forno a 180º graus</p>
+                  <p>2 coloque todos os ingredientes no liquidificador</p>
+                  <p>3 despeje metade da massa numa assadeira antiaderente ou untada com açúucar</p>
+                  <p>4 deixe assar por 30 minutos</p>
+                  <p>dica: para saber se está pronto, basta espetar um garfo ou palito em 3 pontos diferentes do bolo, se não houver resquícios de massa liquida no garfo, está pronto</p>
+                </ion-list>
+              </ion-item>
+            </ion-col>
+            <ion-col size="3"></ion-col>
+           </ion-row>
+
+       
+        <!-- DIVIDER -->
+
+        <ion-row class="align-items-center" id="espacamento">
+          <ion-col size="1"></ion-col>
+          <ion-col size="3" id="divider"></ion-col>
+          <ion-col size="3" id="nomerec">
+            <ion-icon name="checkmark-circle-outline" id="like"></ion-icon>
+            <ion-icon name="close-circle-outline" id="like"></ion-icon>
+            <ion-icon name="heart-circle-outline" id="like"></ion-icon>
+          </ion-col>
+          <ion-col size="3" id="divider"></ion-col>
+          <ion-col size="1"></ion-col>
+        </ion-row>
+
+      </ion-col>
+
+
+
+
+      <ion-col size="3">
+        <ion-row>
+         
+        </ion-row>
+        <ion-row id="espacoremomendados">
+  
+            <div id="imgholder" lines="none">
+              <ion-col>
+              <img src="https://images.pexels.com/photos/17593640/pexels-photo-17593640/free-photo-of-tigela-bowl-bacia-cenoura.jpeg?auto=compress&cs=tinysrgb&w=1600" id="imagensrec">
+            </ion-col>
+            <ion-col>
+              <ion-row id="nomeavarestri">
+                <ion-col id="nomeava">
+                  <h1 id="nome">NOME DA RECEITA NOME</h1>
+                  <h2 id="avaliacao" class="positiva">AVALIAÇAO 99% <ion-icon name="thumbs-up-outline"></ion-icon></h2>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+          </div>
+
+          <div id="imgholder" lines="none">
+            <ion-col>
+            <img src="https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=1600" id="imagensrec">
+          </ion-col>
+          <ion-col>
+            <ion-row id="nomeavarestri">
+              <ion-col id="nomeava">
+                <h1 id="nome">NOME DA RECEITA NOME</h1>
+                <h2 id="avaliacao" class="positiva">AVALIAÇAO 99% <ion-icon name="thumbs-up-outline"></ion-icon></h2>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+        </div>
+        
+        <div id="imgholder" lines="none">
+          <ion-col>
+          <img src="https://images.pexels.com/photos/699953/pexels-photo-699953.jpeg?auto=compress&cs=tinysrgb&w=1600" id="imagensrec">
+        </ion-col>
+        <ion-col>
+          <ion-row id="nomeavarestri">
+            <ion-col id="nomeava">
+              <h1 id="nome">NOME DA RECEITA NOME</h1>
+              <h2 id="avaliacao" class="positiva">AVALIAÇAO 99% <ion-icon name="thumbs-up-outline"></ion-icon></h2>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </div>
+          
+
+      </ion-row>
+      </ion-col>  
+    </ion-row>
+ 
+      <!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+      
+ 
+      
+   
+                           
+
+
+                          <!-- FOOTER -->
+                          <ion-row class="ion-justify-content-center" id="subbanner">
+
+
+                            <ion-col size="4" id="colunasfooter">
+                            <ion-title id="redesfooter">Redes Sociais</ion-title>
+                            <ion-icon name="logo-tiktok" class="iconesredes" id="iconestiktok" (click)="abrirTikTok()"></ion-icon>
+                            <ion-icon name="logo-instagram" class="iconesredes" id="iconestiktok" (click)="abrirInstagram()"></ion-icon>
+                            <ion-icon name="logo-youtube" class="iconesredes" id="iconesyoutube" (click)="abrirYoutube()"></ion-icon>
+
+                            </ion-col> 
+
+
+
+                             <ion-col size="4" id="colunasfooter">
+                            <ion-title id="titulofooter">Polivalente</ion-title>
+                            <img src="../../assets/polivalente.png" width="70px" height="70px" id="logofooter">
+                            </ion-col>
+
+
+
+                            <ion-col size="4" id="colunasfooter">
+                            <ion-title id="titulofooter">Envie-nos sua receita!</ion-title>
+                            <ion-icon name="mail-outline" class="iconesredes"></ion-icon>
+                            </ion-col> 
+
+              
+                
+                          </ion-row>
+
+   
+
+</ion-col>
+</ion-row>
+</ion-content>

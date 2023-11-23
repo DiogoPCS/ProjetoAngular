@@ -1,16 +1,17 @@
+import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
+import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-semgluten',
+  templateUrl: './semgluten.page.html',
+  styleUrls: ['./semgluten.page.scss'],
   standalone: true,
-  imports: [IonicModule,RouterLink, CommonModule],
+  imports: [IonicModule, CommonModule, FormsModule, RouterLink]
 })
-export class HomePage {
+export class SemglutenPage{
 
   urlTikTok = 'https://www.tiktok.com/@polivalentereceitas?_t=8gOzc6KQopq&_r=1';
   urlInstagram = 'https://instagram.com/polivalentereceitas?igshid=MzRlODBiNWFlZA== ';

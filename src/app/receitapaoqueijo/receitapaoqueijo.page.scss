@@ -1,0 +1,364 @@
+*{
+    // outline: 1px dotted black;
+    // border: 1px solid black;
+    margin:0;
+    padding:0;
+    border:0;
+    overflow: hidden;
+    box-shadow: none;
+  }
+  
+  :root{
+  
+    --extra-small-size: 4px;
+    --smal-size: 8px;
+    --medium-size: 16px;
+    --large-size:32px;
+    --extra-large-size: 32px;
+  
+    --font-color: black;
+    
+  }
+  
+              //HEADER
+  
+  
+  #banner{
+    background: #EFE4F6;
+    width: auto;
+  }
+  
+  ion-header{
+    background: rgb(189,136,253);
+    background: linear-gradient(90deg, rgba(189,136,253,1) 35%, rgba(239,228,246,1) 100%);
+    width:100%;
+    height: 10vh;
+  }
+  
+  
+  ion-searchbar.custom{
+    --background: #EFE4F6;
+    --color: #473BA3;
+    --placeholder-color: #473BA3;
+    --icon-color: #473BA3;
+    --clear-button-color: #473BA3;
+    --border-radius: 30px;
+    --box-shadow: none;
+  }
+  
+  #logo{
+    flex-direction: row;
+    justify-content: flex-start;
+    float: left;
+    margin: 10px;
+    transition: 0.5s;
+    width:4vw;
+    height:7vh;
+    
+  }
+  
+  #logo:hover {
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+  
+  #titulo{
+    width:auto;
+    height: auto;
+    display: flex;
+    margin: 3%;
+    margin-left:20%;
+    justify-content:left;
+    align-items: center;
+    color:#473BA3;
+    font-weight: bold;
+    transition: 0.5s;
+  }
+  
+  #titulo:hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  
+  #perfil{
+    width:7vw;
+    height:7vh;
+    float:right;
+    margin: 3%;
+    color:#473BA3;
+  
+  }
+  
+  #segundoheader{
+    background: #BD88FD;
+    height: 7vh;
+  }
+  ion-button{
+    justify-content: center;
+    --background: #C9ADEB;
+    --border-radius: 120px;
+    color: black;
+    font-weight: bold;
+    box-shadow: none;
+    transition: 0.7s;
+    -moz-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;;
+    height:5vh;
+    width:50%;
+    font-size: 15px;
+  }
+  
+  ion-button:hover {
+    --moz-transform: scale(1.2);
+    --webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    width:60%;
+    text-align: start;
+    border-radius: 120px;
+    justify-content: space-between;
+   
+  }
+  
+  ion-button img{
+    display: none;
+  }
+  ion-button:hover img{
+    display: flex;
+    width: 40px;
+    height: 40px;
+    margin-left: 12px;
+  }
+  h2{
+    text-align: center;
+    height: auto;
+    justify-content: center;
+    color: black;
+    font-weight: bold;
+    font-size: 100%;
+  }
+  h2:hover{
+    text-align: start;
+    justify-content: left;
+    color: black;
+    font-weight: bold;
+  }
+  
+  
+  ion-button:hover + #acucar{
+    width: 50px;
+    height: 50px;
+    display: block;
+    text-align: left;
+    justify-content: left;
+  }
+  
+  
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+  
+  
+                    // DIVISOR
+  
+                    #divider{
+                      background-color: #473BA3;
+                      height: 4px;
+                      border-radius: 90px;
+                      justify-content: center;
+                      align-items: center;
+                    }
+                    #espacamento{
+                      margin: 1%;
+                      height: 10vh;
+                      width: 100%;
+                      justify-content: center;
+                      align-items: center;
+                    }
+                    #nomerec{
+                      align-items: center;
+                      justify-content: center;
+                      width:auto;
+                      height: auto;
+                      color: black;
+                      font-weight: bold;
+                      font-size: 20px;
+                    }
+  
+  
+  //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                   
+                    #espacoimagem{
+                      height:35vh;
+                    }
+  
+                    #fotorec{
+                      width:100%;
+                      height:100%
+                    }
+  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                    #ingredientebox{
+                      --background: #D0BCE8;
+                      height:fit-content;
+                      border-radius: 15px;
+                    }
+                    p{
+                        background-color:  #D0BCE8;
+                        background:  #D0BCE8;
+                        color:  black;
+                        padding:5px;
+                    }
+                    #like{
+                      width: 40px;
+                      height: 40px;
+                      margin: 10px;
+                      color:#473BA3;
+                    }
+  
+                    #like:focus{
+                      color:black;
+                    }
+  
+                    #imagensrec{
+                      width:50%;
+                      height:100%;
+                      float:left;
+                      border-radius: 20px;
+                      margin:0;
+                    }
+                    #espacoremomendados{
+                      display:block;
+                    }
+                    #imgholder{
+                      margin:8%;
+                      height:17vh;
+                      border-radius: 20px;
+                      background:#D0BCE8;
+                      --box-shadow: none;
+                      --padding: 0%;
+                    }
+                   
+  
+  #nomeavarestri{
+    height:100%;
+  }
+  #restri{
+    height:100%;
+  }
+  
+  .iconsrestr{
+    width:35%;
+    height:35%;
+    margin:5%;
+  }
+  
+  #nomeava{
+    height:100%;
+  }
+  #nome{
+    font-size: 15px;
+    padding: 10px;
+    text-align: center;
+    height: 60%;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    display: grid;
+    font-weight: bold;
+  }
+  
+  #avaliacao{
+    font-size: 16px;
+    height: 50%;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  
+  
+  #espacoremomendados{
+    display:block;
+  }
+  #imgholder{
+    margin:5%;
+    height:13vh;
+    width:80%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    background:#D0BCE8;
+    --box-shadow: none;
+    --padding: 0%;
+  }
+  
+  #listinha{
+    background:#B477FA;
+  
+  }
+  
+  
+  
+                    //  FOOTER
+  
+    #subbanner{
+      background-color: #C294F8;
+      background:#C294F8;
+      color:#C294F8;
+      height: 25vh;
+      width:auto;
+      margin-top: 2%;
+    }
+  
+    #colunasfooter{
+      height: auto;
+    }
+  
+    ion-title{
+      color:black;
+      width: 200px;
+    }
+  
+    #logofooter{
+      justify-content: center;
+      align-items: center;
+      margin: 10px;
+      transition: 0.3s;
+    }
+    #logofooter:hover {
+      -moz-transform: scale(1.2);
+      -webkit-transform: scale(1.2);
+      transform: scale(1.2);
+  
+    }
+  
+    #titulofooter{
+      width:auto;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      color:#473BA3;
+      font-weight: bold;
+      font-size: 25px;
+      margin-top:10px;
+    }
+  
+    #redesfooter{
+      width:auto;
+      text-align: center;
+      justify-content: center;
+      align-items: center;
+      color:#473BA3;
+      font-weight: bold;
+      font-size: 25px;
+      margin-top:10px;
+    }
+  
+    .iconesredes{
+      height:60px;
+      width:60px;
+      justify-content: center;
+      align-items: center;
+      margin: 10px;
+      color:#473BA3;
+    }

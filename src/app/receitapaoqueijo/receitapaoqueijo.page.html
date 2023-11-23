@@ -1,0 +1,269 @@
+<ion-content [fullscreen]="true">
+  <ion-row class="ion-justify-content-center" id="banner">
+    <ion-col size="12" size-md="12" size-lg="12" class="ion-text-center full-height">
+     <ion-header collapse="fade">
+
+        <!-- HEADER -->
+        <ion-row class="align-items-center">
+         <ion-col>
+           <img srcset="../../assets/polivalente.png" width="70px" height="70px" id="logo" routerLink="/home">
+           <h1 id="titulo">Polivalente</h1>
+           </ion-col>
+         <ion-col>
+           <ion-searchbar class="custom"
+               show-cancel-button="never"
+               animated="true"
+               placeholder="Pesquisar..."
+               class="custom"
+           ></ion-searchbar>
+         </ion-col>
+         <ion-col>
+           <a>
+           <ion-icon name="person-circle-outline" id="perfil" routerLink="/login"></ion-icon>
+         </a>
+         </ion-col>
+       </ion-row>
+     </ion-header>
+
+
+
+     <!-- OPÇOES -->
+
+     <ion-row class="align-items-center" id="segundoheader">
+
+       <ion-col>
+         <ion-button routerLink="/semgluten">
+          <h2>Sem Gluten</h2>
+          <img src="../assets/gluten.png" id="gluten">
+        </ion-button>
+       </ion-col>
+       <ion-col>
+         <ion-button routerLink="/semlactose">
+          <h2>Sem Lactose</h2>
+          <img src="../assets/lactose.png" id="lactose">
+        </ion-button>
+      
+       </ion-col>
+       <ion-col>
+         <ion-button routerLink="/semacucar">
+          <h2>Sem Açúcar</h2>
+          <img src="../assets/açucar.png" id="acucar">
+        </ion-button>
+       </ion-col>
+       <ion-col>
+         <ion-button routerLink="/lowcarb">
+          <h2>Low Carb</h2>
+          <img src="../assets/carboidrato.png" id="carboidrato">
+        </ion-button>
+       </ion-col>
+     </ion-row>
+
+    
+ <!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+ 
+       <!-- DIVIDER -->
+        <ion-row>
+       <ion-col size="9">
+ <ion-row class="align-items-left" id="espacamento">
+  <ion-col size="1"></ion-col>
+  <ion-col size="3" id="divider"></ion-col>
+  <ion-col size="4" id="nomerec">PAO DE QUEIJO VEGANO</ion-col>
+  <ion-col size="3" id="divider"></ion-col>
+  <ion-col size="1"></ion-col>
+ </ion-row>
+
+ <!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+
+ <!--IMAGEM RECEITA-->
+
+ <ion-row class="align-items-center" id="espacoimagem">
+  <ion-col size="3"></ion-col>
+  <ion-col size="6"> 
+  <img src="https://media.istockphoto.com/id/1251402346/pt/foto/brazilian-snack-cheese-bread.jpg?b=1&s=612x612&w=0&k=20&c=EykCiEu4v5uKqh3gFk7MzN-t6xUxlwHAW4v6VB2385g=" id="fotorec">
+  </ion-col>
+  <ion-col size="3"></ion-col>
+ </ion-row>
+
+
+ <!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+ 
+       <!-- DIVIDER -->
+
+       <ion-row class="align-items-center" id="espacamento">
+        <ion-col size="1"></ion-col>
+        <ion-col size="3" id="divider"></ion-col>
+        <ion-col size="4" id="nomerec">Ingredientes</ion-col>
+        <ion-col size="3" id="divider"></ion-col>
+        <ion-col size="1"></ion-col>
+      </ion-row>
+      
+ <!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+
+       <!--INGREDIENTES-->
+       <ion-row>
+        <ion-col size="3"></ion-col>
+        <ion-col size="6">
+          <ion-item id="ingredientebox" lines="none">
+            <ion-list lines="none">
+
+              <p>1 xícara de chá de batata cozida</p>
+              <p>2 xícaras de chá de polvilho doce</p>
+              <p>1/2 xícara de chá de polvilho azedo</p>
+              <p>1/2 xícara de chá de água morna</p>
+              <p>1/3 de xícara de chá de azeite</p>
+              <p>Sal a gosto</p>
+
+              
+            </ion-list>
+          </ion-item>
+        </ion-col>
+        <ion-col size="3"></ion-col>
+       </ion-row>
+
+
+        <!-- DIVIDER -->
+
+        <ion-row class="align-items-center" id="espacamento">
+          <ion-col size="1"></ion-col>
+          <ion-col size="3" id="divider"></ion-col>
+          <ion-col size="4" id="nomerec">Modo de Preparo</ion-col>
+          <ion-col size="3" id="divider"></ion-col>
+          <ion-col size="1"></ion-col>
+        </ion-row>
+
+           <!--MODO DE PREPARO-->
+           <ion-row>
+            <ion-col size="3"></ion-col>
+            <ion-col size="6">
+              <ion-item id="ingredientebox" lines="none">
+                <ion-list lines="none">
+                  <p>1 Em um recipiente, coloque a batata cozida e amasse bem com um garfo até ficar um purê bem macio;</p>
+                  <p>2 Adicione os ingredientes líquidos: o azeite e a água morna. Misture;</p>
+                  <p>3 Acrescente o polvilho doce, o salgado e o sal. Misture bem com as mãos;</p>
+                  <p>4 Misture até a massa ficar homogênea, firme e que estica um pouco sem despedaçar;</p>
+                  <p>5 Pegue porções da massa e molde em bolinhas pequenas;</p>
+                  <p>6 Em uma forma untada com óleo, disponha as bolinhas com uma distância entre elas e leve ao forno preaquecido a 230 ºC por cerca de 15 minutos;</p>
+                  <p>7 Agora é só servir. Bom apetite!</p>
+                </ion-list>
+              </ion-item>
+            </ion-col>
+            <ion-col size="3"></ion-col>
+           </ion-row>
+
+       
+        <!-- DIVIDER -->
+
+        <ion-row class="align-items-center" id="espacamento">
+          <ion-col size="1"></ion-col>
+          <ion-col size="3" id="divider"></ion-col>
+          <ion-col size="3" id="nomerec">
+            <ion-icon name="checkmark-circle-outline" id="like"></ion-icon>
+            <ion-icon name="close-circle-outline" id="like"></ion-icon>
+            <ion-icon name="heart-circle-outline" id="like"></ion-icon>
+          </ion-col>
+          <ion-col size="3" id="divider"></ion-col>
+          <ion-col size="1"></ion-col>
+        </ion-row>
+
+      </ion-col>
+
+
+
+
+      <ion-col size="3">
+        <ion-row>
+         
+        </ion-row>
+        <ion-row id="espacoremomendados">
+  
+            <div id="imgholder" lines="none">
+              <ion-col>
+              <img src="https://images.pexels.com/photos/17593640/pexels-photo-17593640/free-photo-of-tigela-bowl-bacia-cenoura.jpeg?auto=compress&cs=tinysrgb&w=1600" id="imagensrec">
+            </ion-col>
+            <ion-col>
+              <ion-row id="nomeavarestri">
+                <ion-col id="nomeava">
+                  <h1 id="nome">NOME DA RECEITA NOME</h1>
+                  <h2 id="avaliacao" class="positiva">AVALIAÇAO 99% <ion-icon name="thumbs-up-outline"></ion-icon></h2>
+                </ion-col>
+              </ion-row>
+            </ion-col>
+          </div>
+
+          <div id="imgholder" lines="none">
+            <ion-col>
+            <img src="https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=1600" id="imagensrec">
+          </ion-col>
+          <ion-col>
+            <ion-row id="nomeavarestri">
+              <ion-col id="nomeava">
+                <h1 id="nome">NOME DA RECEITA NOME</h1>
+                <h2 id="avaliacao" class="positiva">AVALIAÇAO 99% <ion-icon name="thumbs-up-outline"></ion-icon></h2>
+              </ion-col>
+            </ion-row>
+          </ion-col>
+        </div>
+        
+        <div id="imgholder" lines="none">
+          <ion-col>
+          <img src="https://images.pexels.com/photos/699953/pexels-photo-699953.jpeg?auto=compress&cs=tinysrgb&w=1600" id="imagensrec">
+        </ion-col>
+        <ion-col>
+          <ion-row id="nomeavarestri">
+            <ion-col id="nomeava">
+              <h1 id="nome">NOME DA RECEITA NOME</h1>
+              <h2 id="avaliacao" class="positiva">AVALIAÇAO 99% <ion-icon name="thumbs-up-outline"></ion-icon></h2>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </div>
+          
+
+      </ion-row>
+      </ion-col>  
+    </ion-row>
+ 
+      <!--/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
+      
+ 
+      
+   
+                           
+
+
+                          <!-- FOOTER -->
+                          <ion-row class="ion-justify-content-center" id="subbanner">
+
+
+                            <ion-col size="4" id="colunasfooter">
+                            <ion-title id="redesfooter">Redes Sociais</ion-title>
+                            <ion-icon name="logo-tiktok" class="iconesredes" id="iconestiktok" (click)="abrirTikTok()"></ion-icon>
+                            <ion-icon name="logo-instagram" class="iconesredes" id="iconestiktok" (click)="abrirInstagram()"></ion-icon>
+                            <ion-icon name="logo-youtube" class="iconesredes" id="iconesyoutube" (click)="abrirYoutube()"></ion-icon>
+
+                            </ion-col> 
+
+
+
+                             <ion-col size="4" id="colunasfooter">
+                            <ion-title id="titulofooter">Polivalente</ion-title>
+                            <img src="../../assets/polivalente.png" width="70px" height="70px" id="logofooter">
+                            </ion-col>
+
+
+
+                            <ion-col size="4" id="colunasfooter">
+                            <ion-title id="titulofooter">Envie-nos sua receita!</ion-title>
+                            <ion-icon name="mail-outline" class="iconesredes"></ion-icon>
+                            </ion-col> 
+
+              
+                
+                          </ion-row>
+
+   
+
+</ion-col>
+</ion-row>
+</ion-content>

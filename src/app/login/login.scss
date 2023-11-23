@@ -1,0 +1,110 @@
+*{
+    // outline: 1px dotted black;
+    // border: 1px solid black;
+    margin:0;
+    padding:0;
+    border:0;
+    overflow: hidden; //esconde barra de rolagem (scroll)
+    box-shadow: none;
+  }
+  
+  #banner{
+    background: rgb(189,136,253);
+    background: linear-gradient(90deg, rgba(189,136,253,1) 33%, rgba(229,209,247,1) 80%, rgba(255,255,255,1) 100%);
+    width: 100%;
+    height: 100%;
+  }
+
+  #eve{
+    height: 100%;
+  }
+  .container{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    width:40vw;
+    height:50vh;
+    float: initial;
+    margin: auto;
+  }
+  #caixa{
+    --align-items: center;
+    --justify-content: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    --background: #EFE4F6;
+    --color: #473BA3;
+    --placeholder-color: #473BA3;
+    --icon-color: #473BA3;
+    --clear-button-color: #473BA3;
+    --border-radius: 30px;
+    --box-shadow: none;
+    width:25vw;
+    text-decoration: none;
+  }
+  #titulo{
+    width:auto;
+    height:auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#473BA3;
+    font-weight: bold;
+    transition: 0.5s;
+  }
+  
+  #titulo:hover {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+
+  ion-button{
+    justify-content: center;
+    --background: #473BA3;
+    --border-radius: 120px;
+    font-weight: bold;
+    box-shadow: none;
+    transition: 0.7s;
+    -moz-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;;
+  }
+  
+  ion-button:hover {
+    --moz-transform: scale(1.2);
+    --webkit-transition: all 0.2s;
+    --transform: scale(1.1);
+    transition: all 0.2s;
+    width:10vw;
+    text-align: start;
+    border-radius: 120px;
+    justify-content: space-between;
+  }
+  #co2{
+    display: block;
+    height: 100%;
+  }
+  #logo{
+    align-items: flex-start;
+    transition: 0.5s;
+    width: 280px;
+    height:280px;
+    margin: 10%;
+    margin-top:15vh;
+  }
+
+  #logo:hover {
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+  }
+
+  p{
+    margin-top: 10vh;
+    margin-botton: 10vh;
+    color: black;
+  }

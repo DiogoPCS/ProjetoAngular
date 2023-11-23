@@ -1,0 +1,74 @@
+<ion-content [fullscreen]="true">
+   <ion-row class="ion-justify-content-center" id="banner">
+     <ion-col size="12" size-mg="12" size-lg="12" class="ion-text-center full-height">
+      <ion-header collapse="fade">
+      </ion-header>
+
+      <ion-row class="ion-justify-content-center align-items-center" id="eve">
+        
+        <ion-col>
+            <h1 id="titulo">Cadastro</h1>
+
+            <div container>
+              <ion-item id="caixa" lines="none">
+                <ion-input
+                  label="E-mail"
+                  labelPlacement="stacked"
+                  clearInput="true"
+                  placeholder="Insira seu endereço de email"
+
+                >
+                </ion-input>
+              </ion-item>
+              <ion-item id="caixa" lines="none">
+                <ion-input
+                  label="Nome"
+                  labelPlacement="stacked"
+                  [clearInput]="true"
+                  placeholder="Insira seu nome de usuário"
+                 
+                >
+                </ion-input>
+              </ion-item>
+
+            
+            <ion-item id="caixa" lines="none">
+              <ion-input
+                label="Número de telefone"
+                labelPlacement="stacked"
+                [clearInput]="true"
+                placeholder="Insira seu número de telefone"
+               
+              >
+              </ion-input>
+            </ion-item>
+              <ion-item id="caixa" lines="none">
+                <ion-input
+                  label="Senha"
+                  labelPlacement="stacked"
+                  type="password"
+                  placeholder="Crie sua senha"
+               
+                >
+                </ion-input>
+              </ion-item>
+              </div>
+              
+           
+            <ion-button routerLink="/home">Confirmar</ion-button>
+        </ion-col>
+       
+        <ion-col id="co2">
+          <img src="../assets/polivalente.png" id="logo">
+          <h2 id="titulo">Qualidade sem restrições</h2>
+          
+          <p>Já possui uma conta? Faça já o login aqui!</p>
+          
+          <ion-button routerLink="/cadastro">Login</ion-button>
+
+        </ion-col>
+      </ion-row>
+             
+
+       </ion-col>
+         </ion-row>
